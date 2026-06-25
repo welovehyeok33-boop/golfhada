@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #ffffff;
+  --color-foreground: #14241a;
+  --font-sans: var(--font-noto-sans-kr), ui-sans-serif, system-ui, sans-serif;
+
+  /* 골프 그린 팔레트 */
+  --color-green-50: #f0faf2;
+  --color-green-100: #dcf4e1;
+  --color-green-200: #bbe8c6;
+  --color-green-300: #8ad6a0;
+  --color-green-400: #54bd75;
+  --color-green-500: #2fa256;
+  --color-green-600: #1f8344;
+  --color-green-700: #1a6839;
+  --color-green-800: #195330;
+  --color-green-900: #16442a;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+/* 본문 콘텐츠 가독성 */
+.prose-kr p {
+  line-height: 1.85;
+  word-break: keep-all;
 }
