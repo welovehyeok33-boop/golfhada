@@ -32,20 +32,6 @@ export const importedCourses: GolfCourse[] = [
     imported: true,
   },
   {
-    slug: "제이드팰리스-골프클럽",
-    name: "제이드팰리스 골프클럽",
-    regionSlug: "gangwon",
-    city: "춘천시",
-    address: "강원 춘천시 남산면 경춘로 212-30",
-    holes: 18,
-    type: "회원제",
-    areaSqm: 976760,
-    description:
-      "제이드팰리스 골프클럽은(는) 강원 춘천시에 있는 회원제 골프장입니다. 18홀 규모의 코스로, 인근 지역 골퍼들의 라운드 수요가 꾸준한 편입니다. 그린피·캐디·카트 비용 등 세부 이용 조건은 골프장에 직접 문의하는 것이 정확합니다.",
-    features: ["18홀", "회원제", "강원 골프장"],
-    imported: true,
-  },
-  {
     slug: "남춘천컨트리클럽",
     name: "남춘천컨트리클럽",
     regionSlug: "gangwon",
@@ -57,20 +43,6 @@ export const importedCourses: GolfCourse[] = [
     description:
       "남춘천컨트리클럽은(는) 강원 춘천시에 있는 대중제 골프장입니다. 18홀 규모의 코스로, 인근 지역 골퍼들의 라운드 수요가 꾸준한 편입니다. 그린피·캐디·카트 비용 등 세부 이용 조건은 골프장에 직접 문의하는 것이 정확합니다.",
     features: ["18홀", "대중제", "강원 골프장"],
-    imported: true,
-  },
-  {
-    slug: "휘슬링락컨트리클럽",
-    name: "휘슬링락컨트리클럽",
-    regionSlug: "gangwon",
-    city: "춘천시",
-    address: "강원 춘천시 남산면 동촌로 501",
-    holes: 27,
-    type: "회원제",
-    areaSqm: 1716158,
-    description:
-      "강원 춘천시의 회원제 골프장입니다. 27홀 규모의 코스 구성과 접근성을 고려해 주말·평일 라운드 계획을 세우기 좋습니다. 예약 경쟁이 치열한 성수기에는 미리 부킹 일정을 확인해 두는 것을 권합니다.",
-    features: ["27홀", "회원제", "강원 골프장"],
     imported: true,
   },
   {
@@ -1488,20 +1460,6 @@ export const importedCourses: GolfCourse[] = [
     imported: true,
   },
   {
-    slug: "비전힐스cc",
-    name: "비전힐스CC",
-    regionSlug: "gyeonggi",
-    city: "경기도",
-    address: "경기 경기도 남양주시 화도읍 마치로 226-220",
-    holes: 18,
-    type: "회원제",
-    areaSqm: 980000,
-    description:
-      "경기도에 위치한 회원제 골프장으로 18홀 규모의 코스를 운영합니다. 경기 권역의 다른 골프장과 함께 비교해 보면 자신의 라운드 스타일과 예산에 맞는 코스를 고르는 데 도움이 됩니다. 최신 그린피는 골프장 예약 페이지에서 확인하세요.",
-    features: ["18홀", "회원제", "경기 골프장"],
-    imported: true,
-  },
-  {
     slug: "해비치-컨트리클럽",
     name: "해비치 컨트리클럽",
     regionSlug: "gyeonggi",
@@ -1737,20 +1695,6 @@ export const importedCourses: GolfCourse[] = [
     description:
       "남촌컨트리클럽은(는) 경기 경기도에 있는 회원제 골프장입니다. 18홀 규모의 코스로, 인근 지역 골퍼들의 라운드 수요가 꾸준한 편입니다. 그린피·캐디·카트 비용 등 세부 이용 조건은 골프장에 직접 문의하는 것이 정확합니다.",
     features: ["18홀", "회원제", "경기 골프장"],
-    imported: true,
-  },
-  {
-    slug: "이스트밸리cc",
-    name: "이스트밸리CC",
-    regionSlug: "gyeonggi",
-    city: "경기도",
-    address: "경기 경기도 광주시 곤지암읍 건업길 195",
-    holes: 27,
-    type: "회원제",
-    areaSqm: 1543334,
-    description:
-      "이스트밸리CC은(는) 경기 경기도에 있는 회원제 골프장입니다. 27홀 규모의 코스로, 인근 지역 골퍼들의 라운드 수요가 꾸준한 편입니다. 그린피·캐디·카트 비용 등 세부 이용 조건은 골프장에 직접 문의하는 것이 정확합니다.",
-    features: ["27홀", "회원제", "경기 골프장"],
     imported: true,
   },
   {
@@ -2650,20 +2594,6 @@ export const importedCourses: GolfCourse[] = [
     imported: true,
   },
   {
-    slug: "렉스필드-컨트리클럽",
-    name: "렉스필드 컨트리클럽(회원)",
-    regionSlug: "gyeonggi",
-    city: "경기도",
-    address: "경기 경기도 여주시 산북면 광여로 1115",
-    holes: 18,
-    type: "회원제",
-    areaSqm: 855727,
-    description:
-      "경기 경기도에 자리한 18홀 규모의 회원제 골프장입니다. 경기 지역에서 라운드를 계획하는 골퍼라면 한 번쯤 살펴볼 만한 코스로, 그린피와 예약 가능 시간은 시즌과 요일에 따라 달라지므로 방문 전 공식 채널에서 확인하는 것이 좋습니다.",
-    features: ["18홀", "회원제", "경기 골프장"],
-    imported: true,
-  },
-  {
     slug: "렉스필드-컨트리클럽-2",
     name: "렉스필드 컨트리클럽(비회원)",
     regionSlug: "gyeonggi",
@@ -2871,20 +2801,6 @@ export const importedCourses: GolfCourse[] = [
     description:
       "경기 경기도의 회원제 골프장입니다. 18홀 규모의 코스 구성과 접근성을 고려해 주말·평일 라운드 계획을 세우기 좋습니다. 예약 경쟁이 치열한 성수기에는 미리 부킹 일정을 확인해 두는 것을 권합니다.",
     features: ["18홀", "회원제", "경기 골프장"],
-    imported: true,
-  },
-  {
-    slug: "아난티클럽서울",
-    name: "아난티클럽서울",
-    regionSlug: "gyeonggi",
-    city: "경기도",
-    address: "경기 경기도 가평군 설악면 유명로 961-34",
-    holes: 27,
-    type: "회원제",
-    areaSqm: 1744453,
-    description:
-      "아난티클럽서울은(는) 경기 경기도에 있는 회원제 골프장입니다. 27홀 규모의 코스로, 인근 지역 골퍼들의 라운드 수요가 꾸준한 편입니다. 그린피·캐디·카트 비용 등 세부 이용 조건은 골프장에 직접 문의하는 것이 정확합니다.",
-    features: ["27홀", "회원제", "경기 골프장"],
     imported: true,
   },
   {
@@ -4862,20 +4778,6 @@ export const importedCourses: GolfCourse[] = [
     imported: true,
   },
   {
-    slug: "세이지우드-여수경도",
-    name: "세이지우드 여수경도",
-    regionSlug: "jeonnam",
-    city: "전남",
-    address: "전남 전남 여수시 대경도길 111",
-    holes: 27,
-    type: "대중제",
-    areaSqm: 1640629,
-    description:
-      "전남 전남의 대중제 골프장입니다. 27홀 규모의 코스 구성과 접근성을 고려해 주말·평일 라운드 계획을 세우기 좋습니다. 예약 경쟁이 치열한 성수기에는 미리 부킹 일정을 확인해 두는 것을 권합니다.",
-    features: ["27홀", "대중제", "전남 골프장"],
-    imported: true,
-  },
-  {
     slug: "포라이즌",
     name: "포라이즌",
     regionSlug: "jeonnam",
@@ -5237,20 +5139,6 @@ export const importedCourses: GolfCourse[] = [
     description:
       "해남군에 위치한 대중제 골프장으로 9홀 규모의 코스를 운영합니다. 전남 권역의 다른 골프장과 함께 비교해 보면 자신의 라운드 스타일과 예산에 맞는 코스를 고르는 데 도움이 됩니다. 최신 그린피는 골프장 예약 페이지에서 확인하세요.",
     features: ["9홀", "대중제", "전남 골프장"],
-    imported: true,
-  },
-  {
-    slug: "파인비치골프링크스",
-    name: "파인비치골프링크스",
-    regionSlug: "jeonnam",
-    city: "해남군",
-    address: "전남 해남군 화원면 시아로 224",
-    holes: 18,
-    type: "대중제",
-    areaSqm: 834771,
-    description:
-      "해남군에 위치한 대중제 골프장으로 18홀 규모의 코스를 운영합니다. 전남 권역의 다른 골프장과 함께 비교해 보면 자신의 라운드 스타일과 예산에 맞는 코스를 고르는 데 도움이 됩니다. 최신 그린피는 골프장 예약 페이지에서 확인하세요.",
-    features: ["18홀", "대중제", "전남 골프장"],
     imported: true,
   },
   {
