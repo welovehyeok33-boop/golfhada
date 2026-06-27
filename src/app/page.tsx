@@ -3,6 +3,7 @@ import Image from "next/image";
 import { regions } from "@/data/regions";
 import { courses, countByRegion, getFeaturedCourses } from "@/data/courses";
 import { guides } from "@/data/guides";
+import { tools } from "@/data/tools";
 import RegionCard from "@/components/ui/RegionCard";
 import CourseCard from "@/components/ui/CourseCard";
 import GuideCard from "@/components/ui/GuideCard";
@@ -108,6 +109,35 @@ export default function Home() {
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {guides.slice(0, 3).map((g) => (
               <GuideCard key={g.slug} guide={g} />
+            ))}
+          </div>
+        </section>
+
+        {/* 골프 계산기 */}
+        <section className="py-12">
+          <div className="flex items-end justify-between">
+            <div>
+              <h2 className="text-xl font-bold text-green-900">골프 계산기</h2>
+              <p className="mt-1 text-sm text-green-900/60">라운드 비용·핸디캡·비거리를 바로 계산해 보세요.</p>
+            </div>
+            <Link href="/tools" className="shrink-0 text-sm font-medium text-green-600 hover:text-green-700">
+              전체 보기 →
+            </Link>
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {tools.map((t) => (
+              <Link
+                key={t.slug}
+                href={`/tools/${t.slug}`}
+                className="group flex flex-col rounded-xl border border-green-100 bg-white p-5 transition hover:border-green-300 hover:shadow-md"
+              >
+                <span className="w-fit rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-600">
+                  {t.tagline}
+                </span>
+                <h3 className="mt-3 font-bold text-green-900 group-hover:text-green-700">{t.name}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-green-900/70">{t.description}</p>
+                <span className="mt-3 text-sm font-medium text-green-600">계산하러 가기 →</span>
+              </Link>
             ))}
           </div>
         </section>
