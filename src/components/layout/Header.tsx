@@ -18,6 +18,11 @@ export default function Header() {
               </li>
             ))}
             <li>
+              <Link href="/tools" className="font-semibold text-green-700 hover:text-green-600">
+                계산기
+              </Link>
+            </li>
+            <li>
               <Link href="/guide" className="font-semibold text-green-700 hover:text-green-600">
                 가이드
               </Link>
@@ -26,6 +31,9 @@ export default function Header() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
+          <Link href="/tools" className="text-sm font-medium text-green-700 hover:text-green-600 md:hidden">
+            계산기
+          </Link>
           <Link href="/guide" className="text-sm font-medium text-green-700 hover:text-green-600 md:hidden">
             가이드
           </Link>
