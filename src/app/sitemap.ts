@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config";
 import { regions } from "@/data/regions";
-import { courses } from "@/data/courses";
+import { courses, getCoursesByRegion } from "@/data/courses";
 import { getCourseNote } from "@/data/courseNotes";
 import { guides } from "@/data/guides";
 import { tools } from "@/data/tools";
@@ -19,12 +19,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
-  const regionPages: MetadataRoute.Sitemap = regions.map((r) => ({
-    url: `${base}/region/${r.slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
+  // 노출할 주력 코스가 있는 지역만 사이트맵에 포함합니다.
+  // (지역 페이지의 noindex 기준과 동일하게 맞춥니다.)
+  const regionPages: MetadataRoute.Sitemap = regions
+    .filter((r) => getCoursesByRegion(r.slug).length > 0)
+    .map((r) => ({
+      url: `${base}/region/${r.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }));
 
   // 깊이 있는 리뷰(deepDive)로 보강된 주력 코스만 색인 대상으로 사이트맵에 포함합니다.
   // (코스 상세 페이지의 noindex 기준과 동일하게 맞춥니다.)

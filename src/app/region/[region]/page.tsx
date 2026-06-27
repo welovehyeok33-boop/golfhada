@@ -22,11 +22,15 @@ export async function generateMetadata({
   const title = `${region.name} 골프장 정보 (${count}곳)`;
   const description = `${region.name} 지역 골프장 ${count}곳의 그린피와 코스 정보, 비즈니스·접대 라운드 관점의 장단점을 정리했습니다. ${region.description}`;
 
+  // 노출할 주력 코스가 없는 지역은 (승인 전) 빈 페이지이므로 색인에서 제외합니다.
+  const noindex = count === 0;
+
   return {
     title,
     description,
     alternates: { canonical: `/region/${slug}` },
     openGraph: { title, description, url: `${siteConfig.url}/region/${slug}` },
+    ...(noindex ? { robots: { index: false, follow: true } } : {}),
   };
 }
 

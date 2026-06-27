@@ -1,5 +1,6 @@
 import type { GolfCourse } from "@/types";
 import { importedCourses } from "./courses.imported";
+import { getCourseNote } from "./courseNotes";
 
 // 참고용 시드 데이터입니다. 그린피·연락처 등 변동 정보는 방문 전 각 골프장 공식 채널에서 확인하세요.
 const seedCourses: GolfCourse[] = [
@@ -1078,14 +1079,30 @@ export function getCourse(slug: string): GolfCourse | undefined {
   return courseMap.get(slug);
 }
 
+/** 심층 리뷰(deepDive)가 작성된 주력 코스인지 여부. */
+export function hasDeepDive(slug: string): boolean {
+  return Boolean(getCourseNote(slug)?.deepDive?.length);
+}
+
+// 애드센스 승인 전에는 심층 리뷰(deepDive)가 있는 주력 코스만 "목록"에 노출합니다.
+// 심사봇이 내부 링크를 타고 얇은 코스 페이지에 도달하는 경로를 줄이기 위함입니다.
+// 데이터(courses) 자체는 그대로 두므로 상세 페이지·직접 URL은 계속 동작합니다.
+// 승인 후 PRE_APPROVAL_MODE 를 false 로 바꾸면 전체 코스가 다시 목록에 노출됩니다.
+const PRE_APPROVAL_MODE = true;
+
+/** 지역·홈·관련 코스 등 "목록"에 노출할 코스 집합. */
+export const listedCourses: GolfCourse[] = PRE_APPROVAL_MODE
+  ? courses.filter((c) => !c.imported && hasDeepDive(c.slug))
+  : courses;
+
 export function getCoursesByRegion(regionSlug: string): GolfCourse[] {
-  return courses.filter((c) => c.regionSlug === regionSlug);
+  return listedCourses.filter((c) => c.regionSlug === regionSlug);
 }
 
 export function getFeaturedCourses(): GolfCourse[] {
-  return courses.filter((c) => c.featured);
+  return listedCourses.filter((c) => c.featured);
 }
 
 export function countByRegion(regionSlug: string): number {
-  return courses.reduce((n, c) => (c.regionSlug === regionSlug ? n + 1 : n), 0);
+  return listedCourses.reduce((n, c) => (c.regionSlug === regionSlug ? n + 1 : n), 0);
 }

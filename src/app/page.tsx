@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { regions } from "@/data/regions";
-import { courses, countByRegion, getFeaturedCourses } from "@/data/courses";
+import { listedCourses, countByRegion, getFeaturedCourses } from "@/data/courses";
 import { guides } from "@/data/guides";
 import { tools } from "@/data/tools";
 import RegionCard from "@/components/ui/RegionCard";
@@ -12,6 +12,7 @@ import { siteConfig } from "@/config";
 
 export default function Home() {
   const featured = getFeaturedCourses();
+  const listedRegions = regions.filter((r) => countByRegion(r.slug) > 0);
   const businessGuides = guides.filter((g) => g.category === "비즈니스·접대");
   const featuredGuides = [
     ...businessGuides,
@@ -77,7 +78,7 @@ export default function Home() {
       <section className="border-b border-green-100 bg-white">
         <div className="mx-auto grid max-w-6xl grid-cols-3 divide-x divide-green-100 px-4">
           <div className="py-6 text-center">
-            <div className="text-2xl font-bold text-green-700 sm:text-3xl">{courses.length}</div>
+            <div className="text-2xl font-bold text-green-700 sm:text-3xl">{listedCourses.length}</div>
             <div className="mt-1 text-xs text-green-900/60 sm:text-sm">전국 골프장</div>
           </div>
           <div className="py-6 text-center">
@@ -96,10 +97,10 @@ export default function Home() {
         <section className="py-12">
           <h2 className="text-xl font-bold text-green-900">지역별 골프장</h2>
           <p className="mt-1 text-sm text-green-900/60">
-            거래처 위치에 맞춰 모시기 좋은 지역부터 골라보세요. 전국 {courses.length}개 골프장을 정리했습니다.
+            거래처 위치에 맞춰 모시기 좋은 지역부터 골라보세요. 전국 {listedCourses.length}개 골프장을 정리했습니다.
           </p>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {regions.map((r) => (
+            {listedRegions.map((r) => (
               <RegionCard key={r.slug} region={r} count={countByRegion(r.slug)} />
             ))}
           </div>
