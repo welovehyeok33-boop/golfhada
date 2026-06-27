@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { regions } from "@/data/regions";
 import { courses, countByRegion, getFeaturedCourses } from "@/data/courses";
 import { guides } from "@/data/guides";
@@ -30,13 +31,22 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-green-50 to-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 text-center sm:py-20">
-          <p className="text-sm font-semibold text-green-600">전국 골프장 정보 모음</p>
-          <h1 className="mt-3 text-3xl font-bold leading-tight text-green-900 sm:text-4xl">
+      <section className="relative overflow-hidden">
+        <Image
+          src="/images/hero.jpg"
+          alt="새벽 안개가 내린 골프장 페어웨이와 벙커 전경"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/30" />
+        <div className="relative mx-auto max-w-6xl px-4 py-24 text-center sm:py-32">
+          <p className="text-sm font-semibold text-green-200">전국 골프장 정보 모음</p>
+          <h1 className="mt-3 text-3xl font-bold leading-tight text-white drop-shadow sm:text-5xl">
             오늘은 어디서 라운드할까?
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-green-900/70">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85 drop-shadow">
             전국 골프장의 그린피, 코스 정보, 예약 팁과 주변 맛집까지 한곳에서.
             지역을 선택해 가까운 골프장부터 명문 코스까지 살펴보세요.
           </p>
@@ -49,7 +59,7 @@ export default function Home() {
             </Link>
             <Link
               href="/region/jeju"
-              className="rounded-full border border-green-300 px-6 py-2.5 text-sm font-medium text-green-700 hover:bg-green-50"
+              className="rounded-full border border-white/70 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-sm hover:bg-white/20"
             >
               제주 골프 여행
             </Link>

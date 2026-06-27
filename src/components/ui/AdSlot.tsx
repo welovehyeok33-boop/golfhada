@@ -5,14 +5,9 @@ import { siteConfig } from "@/config";
  * 승인 후 client ID를 넣고, 발급받은 각 슬롯의 data-ad-slot 값을 prop으로 전달하세요.
  */
 export default function AdSlot({ slot, className }: { slot?: string; className?: string }) {
+  // 애드센스 client ID가 설정되기 전(승인 전)에는 아무것도 표시하지 않습니다.
   if (!siteConfig.adsenseClient) {
-    return (
-      <div
-        className={`flex h-24 items-center justify-center rounded-lg border border-dashed border-green-200 bg-green-50/50 text-xs text-green-900/40 ${className ?? ""}`}
-      >
-        광고 영역 (애드센스 승인 후 표시)
-      </div>
-    );
+    return null;
   }
 
   return (

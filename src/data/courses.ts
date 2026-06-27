@@ -624,10 +624,227 @@ const seedCourses: GolfCourse[] = [
     features: ["27홀", "대중제", "오션뷰", "리조트형"],
     nearby: ["여수 밤바다", "오동도", "여수 게장백반"],
   },
+
+  // ── 충북 ──────────────────────────────────────────────
+  {
+    slug: "grand-cc-cheongju",
+    name: "그랜드 컨트리클럽",
+    regionSlug: "chungbuk",
+    city: "청주시",
+    address: "충북 청주시 오창읍 꽃화산길 14",
+    holes: 27,
+    type: "회원제",
+    description:
+      "청주 오창 일대에 자리한 27홀 회원제 코스입니다. 세 개 코스를 조합해 라운드 구성이 다양하고, 청주 도심과 오창과학산업단지에서 가까워 충북권 비즈니스 라운드 수요가 탄탄합니다. 중부고속도로와 가까워 수도권 남부에서도 당일 라운드로 찾기 좋습니다.",
+    features: ["27홀", "회원제", "청주 근교", "중부고속도로 인접"],
+    nearby: ["청주 상당산성", "오창호수공원", "청주 직지문화특구"],
+  },
+  {
+    slug: "ananti-jungang-jincheon",
+    name: "아난티 중앙 골프클럽",
+    regionSlug: "chungbuk",
+    city: "진천군",
+    address: "충북 진천군 백곡면 배티로 818-105",
+    holes: 27,
+    type: "회원제",
+    description:
+      "진천 백곡면 산자락에 들어선 27홀 회원제 코스로, 리조트 브랜드 아난티가 운영합니다. 깊은 산세에 둘러싸여 한적하고 차분한 분위기에서 라운드를 즐길 수 있으며, 수도권 남부와 충청권 양쪽에서 접근이 가능한 입지입니다.",
+    features: ["27홀", "회원제", "산악형", "충청권"],
+    nearby: ["진천 농다리", "보탑사", "초평호"],
+  },
+  {
+    slug: "imperial-lake-chungju",
+    name: "임페리얼레이크 컨트리클럽",
+    regionSlug: "chungbuk",
+    city: "충주시",
+    address: "충북 충주시 금가면 다래울길 52",
+    holes: 18,
+    type: "대중제",
+    greenFeeWeekday: 120000,
+    greenFeeWeekend: 180000,
+    description:
+      "충주 금가면의 18홀 대중제 코스로, 이름처럼 물을 활용한 홀 구성이 특징입니다. 수도권에서 두 시간 안팎으로 닿는 충주권 가성비 코스라 단체 라운드 수요가 많고, 충주호·수안보 온천과 묶어 1박 골프 여행으로 즐기기 좋습니다.",
+    features: ["18홀", "대중제", "가성비", "충주권"],
+    nearby: ["충주호", "수안보 온천", "충주 사과"],
+  },
+
+  // ── 세종 ──────────────────────────────────────────────
+  {
+    slug: "sejong-emerson-cc",
+    name: "세종 에머슨 컨트리클럽",
+    regionSlug: "sejong",
+    city: "세종특별자치시",
+    address: "세종특별자치시 전의면 운주산로 1510",
+    holes: 27,
+    type: "회원제",
+    description:
+      "세종 전의면 운주산 자락에 조성된 대규모 27홀 회원제 코스입니다. 세종·대전·청주 어디서나 30~40분대로 접근할 수 있는 충청권 중심 입지가 강점이며, 넓은 부지를 살린 시원한 코스 구성을 갖췄습니다.",
+    features: ["27홀", "회원제", "충청권 중심", "운주산 자락"],
+    nearby: ["운주산성", "세종호수공원", "비암사"],
+  },
+  {
+    slug: "sejong-raycastle",
+    name: "세종 레이캐슬 골프&리조트",
+    regionSlug: "sejong",
+    city: "세종특별자치시",
+    address: "세종특별자치시 전의면 의당전의로 252",
+    holes: 27,
+    type: "대중제",
+    greenFeeWeekday: 130000,
+    greenFeeWeekend: 190000,
+    description:
+      "세종 전의면의 27홀 대중제 리조트 코스로, 회원권 없이 누구나 예약할 수 있어 충청권 골퍼들이 즐겨 찾습니다. 숙박 시설을 함께 운영해 가족·단체 골프 여행지로 활용도가 높고, 세종 신도시와 가까워 접근이 편리합니다.",
+    features: ["27홀", "대중제", "리조트형", "세종 근교"],
+    nearby: ["세종호수공원", "국립세종수목원", "조치원 전통시장"],
+  },
+
+  // ── 대전 ──────────────────────────────────────────────
+  {
+    slug: "yuseong-cc",
+    name: "유성 컨트리클럽",
+    regionSlug: "daejeon",
+    city: "유성구",
+    address: "대전 유성구 현충원로 200",
+    holes: 18,
+    type: "회원제",
+    description:
+      "대전 유성구에 자리한 18홀 회원제 코스로, 도심에서 가까운 입지가 가장 큰 강점입니다. 유성온천·대전 시내와 인접해 라운드 전후 동선이 편하고, 경부·호남고속도로가 만나는 교통 요지라 전국 어디서나 접근이 수월합니다.",
+    features: ["18홀", "회원제", "도심 근접", "교통 요지"],
+    nearby: ["유성온천", "국립대전현충원", "대전 성심당"],
+  },
+
+  // ── 대구 ──────────────────────────────────────────────
+  {
+    slug: "guni-cc",
+    name: "구니 컨트리클럽",
+    regionSlug: "daegu",
+    city: "군위군",
+    address: "대구 군위군 군위읍 도군로 2450",
+    holes: 18,
+    type: "대중제",
+    greenFeeWeekday: 110000,
+    greenFeeWeekend: 170000,
+    description:
+      "대구로 편입된 군위군에 자리한 18홀 대중제 코스입니다. 회원권 없이 예약할 수 있어 대구·경북권 골퍼들의 가성비 라운드 장소로 인기가 있고, 한적한 농촌 풍경 속에서 여유로운 라운드를 즐길 수 있습니다.",
+    features: ["18홀", "대중제", "가성비", "대구·경북권"],
+    nearby: ["군위 화본역", "한밤마을 돌담길", "군위 삼국유사테마파크"],
+  },
+
+  // ── 광주 ──────────────────────────────────────────────
+  {
+    slug: "eodeungsan-cc",
+    name: "어등산 컨트리클럽",
+    regionSlug: "gwangju",
+    city: "광산구",
+    address: "광주 광산구 무진대로 31",
+    holes: 27,
+    type: "대중제",
+    greenFeeWeekday: 130000,
+    greenFeeWeekend: 190000,
+    description:
+      "광주 광산구 어등산 자락에 조성된 27홀 대중제 코스입니다. 광주 도심에서 20분 안팎으로 닿는 접근성과 합리적인 그린피로 호남권 골퍼들이 가장 자주 찾는 곳 중 하나입니다. 세 개 코스를 갖춰 주말에도 부킹 물량이 비교적 넉넉합니다.",
+    features: ["27홀", "대중제", "도심 근접", "합리적 그린피"],
+    nearby: ["어등산", "광주 송정역시장", "광주 1913송정역시장"],
+  },
+
+  // ── 울산 ──────────────────────────────────────────────
+  {
+    slug: "baystars-cc",
+    name: "베이스타즈 컨트리클럽",
+    regionSlug: "ulsan",
+    city: "북구",
+    address: "울산 북구 미포산업로 800",
+    holes: 18,
+    type: "대중제",
+    greenFeeWeekday: 130000,
+    greenFeeWeekend: 190000,
+    description:
+      "울산 북구에 자리한 18홀 대중제 코스로, 동해 바다와 가까운 입지가 특징입니다. 울산·포항 산업단지 배후 수요가 탄탄해 평일 라운드가 활발하고, 온화한 동해안 기후 덕에 라운드 가능 시즌이 긴 편입니다.",
+    features: ["18홀", "대중제", "동해 인근", "긴 라운드 시즌"],
+    nearby: ["강동·주전 몽돌해변", "울산대교 전망대", "정자항 대게"],
+  },
+
+  // ── 전북 ──────────────────────────────────────────────
+  {
+    slug: "gunsan-cc",
+    name: "군산 컨트리클럽",
+    regionSlug: "jeonbuk",
+    city: "군산시",
+    address: "전북 군산시 옥서면 남산군로 1685",
+    holes: 81,
+    type: "대중제",
+    greenFeeWeekday: 120000,
+    greenFeeWeekend: 180000,
+    description:
+      "무려 81홀을 갖춘 국내 최대 규모급 대중제 골프장입니다. 여러 코스를 조합해 라운드 선택지가 넓고, 압도적인 부킹 물량 덕에 성수기 주말에도 예약이 비교적 수월합니다. 전국 단위 단체·대회 수요가 많아 골프 여행의 거점으로 꼽힙니다.",
+    features: ["81홀", "대중제", "국내 최대 규모", "넓은 부킹 물량"],
+    nearby: ["군산 근대역사박물관", "선유도", "군산 이성당 빵집"],
+  },
+  {
+    slug: "iksan-cc",
+    name: "익산 컨트리클럽",
+    regionSlug: "jeonbuk",
+    city: "익산시",
+    address: "전북 익산시 무왕로38길 111",
+    holes: 18,
+    type: "대중제",
+    greenFeeWeekday: 110000,
+    greenFeeWeekend: 170000,
+    description:
+      "익산 도심에서 가까운 18홀 대중제 코스로, 전북 북부권 골퍼들이 부담 없이 찾는 생활 밀착형 코스입니다. 완만한 지형이라 라운드 난도가 높지 않고, KTX 익산역과 가까워 타지에서 기차로 접근하기에도 편리합니다.",
+    features: ["18홀", "대중제", "도심 근접", "완만한 코스"],
+    nearby: ["익산 미륵사지", "왕궁리 유적", "익산 황등비빔밥"],
+  },
+
+  // ── 경북 (보강) ────────────────────────────────────────
+  {
+    slug: "mauna-ocean-cc",
+    name: "마우나오션 컨트리클럽",
+    regionSlug: "gyeongbuk",
+    city: "경주시",
+    address: "경북 경주시 양남면 동남로 982",
+    holes: 18,
+    type: "회원제",
+    description:
+      "경주 양남면, 동해와 가까운 구릉지에 조성된 18홀 회원제 리조트 코스입니다. 바다와 산을 함께 조망하는 입지가 강점이며, 리조트 숙박과 연계해 경주·울산권 골프 여행 코스로 활용됩니다. 온화한 동해안 기후로 사계절 라운드가 가능합니다.",
+    features: ["18홀", "회원제", "리조트형", "동해 조망"],
+    nearby: ["경주 양남 주상절리", "문무대왕릉", "감포항"],
+  },
+  {
+    slug: "bomun-gc",
+    name: "보문 골프클럽",
+    regionSlug: "gyeongbuk",
+    city: "경주시",
+    address: "경북 경주시 보문로 182-14",
+    holes: 18,
+    type: "대중제",
+    greenFeeWeekday: 130000,
+    greenFeeWeekend: 200000,
+    description:
+      "경주 보문관광단지 안에 자리한 18홀 대중제 코스입니다. 라운드와 경주 역사 여행을 한 번에 즐길 수 있는 입지가 가장 큰 매력으로, 보문호를 끼고 도는 완만한 코스라 가족·단체 라운드에 잘 어울립니다. 숙박·관광 인프라가 단지 안에 모여 있어 동선이 편합니다.",
+    features: ["18홀", "대중제", "관광단지 내", "완만한 코스"],
+    nearby: ["보문호", "불국사", "경주 황리단길"],
+  },
 ];
 
-// 직접 작성한 시드 코스를 먼저 노출하고, 공공데이터 기반 목록을 뒤에 이어 붙입니다.
-export const courses: GolfCourse[] = [...seedCourses, ...importedCourses];
+// 승인 전에는 보강하지 않은 공공데이터 코스를 비공개로 둡니다.
+// 승인 후 INCLUDE_IMPORTED 를 true 로 바꾸면 전체 목록이 다시 노출됩니다.
+const INCLUDE_IMPORTED = false;
+
+// 시드 코스와 이름이 겹치는 임포트 코스는 재공개 시 자동으로 제외합니다.
+function normalizeName(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/\s+/g, "")
+    .replace(/(컨트리클럽|골프클럽|골프앤리조트|골프&리조트|골프리조트|골프장|c\.c|cc|g\.c|gc)$/g, "");
+}
+const seedNameKeys = new Set(seedCourses.map((c) => normalizeName(c.name)));
+const dedupedImported = importedCourses.filter((c) => !seedNameKeys.has(normalizeName(c.name)));
+
+// 직접 작성한 시드 코스를 먼저 노출하고, (승인 후) 공공데이터 기반 목록을 뒤에 이어 붙입니다.
+export const courses: GolfCourse[] = INCLUDE_IMPORTED
+  ? [...seedCourses, ...dedupedImported]
+  : [...seedCourses];
 
 export const courseMap = new Map(courses.map((c) => [c.slug, c]));
 
