@@ -59,10 +59,10 @@ export default function Home() {
               수도권 골프장 보기
             </Link>
             <Link
-              href="/region/jeju"
+              href="/tools"
               className="rounded-full border border-white/70 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-sm hover:bg-white/20"
             >
-              제주 골프 여행
+              골프 계산기
             </Link>
           </div>
         </div>
