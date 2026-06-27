@@ -43,13 +43,13 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/30" />
         <div className="relative mx-auto max-w-6xl px-4 py-24 text-center sm:py-32">
-          <p className="text-sm font-semibold text-green-200">전국 골프장 정보 모음</p>
+          <p className="text-sm font-semibold text-green-200">비즈니스·접대 골프장 가이드</p>
           <h1 className="mt-3 text-3xl font-bold leading-tight text-white drop-shadow sm:text-5xl">
-            오늘은 어디서 라운드할까?
+            이번엔 어디로 모실까?
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85 drop-shadow">
-            전국 골프장의 그린피, 코스 정보, 예약 팁과 주변 맛집까지 한곳에서.
-            지역을 선택해 가까운 골프장부터 명문 코스까지 살펴보세요.
+            거래처를 모시는 라운드는 코스 평점만으로 고를 수 없습니다. 접대하기 좋은지, 격식과 접근성은 어떤지 —
+            전국 골프장을 비즈니스 라운드의 시선으로 정리했습니다.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
@@ -59,10 +59,10 @@ export default function Home() {
               수도권 골프장 보기
             </Link>
             <Link
-              href="/tools"
+              href="/about"
               className="rounded-full border border-white/70 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-sm hover:bg-white/20"
             >
-              골프 계산기
+              운영자 소개
             </Link>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function Home() {
         <section className="py-12">
           <h2 className="text-xl font-bold text-green-900">지역별 골프장</h2>
           <p className="mt-1 text-sm text-green-900/60">
-            전국 {courses.length}개 골프장 정보를 지역별로 정리했습니다.
+            거래처 위치에 맞춰 모시기 좋은 지역부터 골라보세요. 전국 {courses.length}개 골프장을 정리했습니다.
           </p>
           <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {regions.map((r) => (
@@ -104,9 +104,10 @@ export default function Home() {
 
         {/* 추천 골프장 */}
         <section className="py-12">
-          <h2 className="text-xl font-bold text-green-900">이번 주 추천 골프장</h2>
+          <h2 className="text-xl font-bold text-green-900">접대하기 좋은 추천 코스</h2>
           <p className="mt-1 text-sm text-green-900/60">
-            에디터가 직접 골라 정리한 코스입니다. 상세 페이지마다 &lsquo;이런 분께 추천&rsquo; 메모를 더했어요.
+            운영자 {siteConfig.author.name}가 비즈니스 라운드 시선으로 골랐습니다. 상세 페이지에 코스별 접대 장단점을
+            정리해 뒀어요.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((c) => (
@@ -166,28 +167,28 @@ export default function Home() {
       {/* 예약 팁 (체류시간용) — 진한 그린 밴드 */}
       <section className="mt-4 bg-green-700">
         <div className="mx-auto max-w-6xl px-4 py-14">
-          <h2 className="text-xl font-bold text-white">골프장 예약, 이것만은 알아두세요</h2>
-          <p className="mt-1 text-sm text-green-100/80">라운드 전에 알아두면 돈과 시간을 아끼는 기본기.</p>
+          <h2 className="text-xl font-bold text-white">접대 라운드, 이것만은 챙기세요</h2>
+          <p className="mt-1 text-sm text-green-100/80">코스 실력보다 중요한 건, 모시는 사람이 편한가입니다.</p>
           <div className="prose-kr mt-6 grid gap-6 md:grid-cols-3">
             <article className="rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
-              <h3 className="font-bold text-white">그린피는 시즌·요일에 따라 다릅니다</h3>
+              <h3 className="font-bold text-white">코스보다 격식과 접근성</h3>
               <p className="mt-2 text-sm text-green-50/90">
-                봄·가을 성수기와 주말은 그린피가 크게 오릅니다. 같은 코스라도 평일 새벽·오후 시간대를
-                노리면 30% 이상 저렴하게 라운드할 수 있습니다.
+                중요한 거래처일수록 화려한 코스보다 클럽하우스 격식, 식사 수준, 회사에서의 거리를 먼저 봅니다.
+                모시는 분이 부담 없이 도착할 수 있는지가 첫 기준입니다.
               </p>
             </article>
             <article className="rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
-              <h3 className="font-bold text-white">대중제와 회원제의 차이</h3>
+              <h3 className="font-bold text-white">동반자 구력에 코스를 맞추세요</h3>
               <p className="mt-2 text-sm text-green-50/90">
-                대중제(퍼블릭)는 회원권 없이 누구나 예약할 수 있고 세금 혜택으로 그린피가 낮은 편입니다.
-                회원제는 코스 관리와 예약 우선권에서 강점이 있습니다.
+                페어웨이가 좁고 난도 높은 코스는 구력이 짧은 동반자를 지치게 합니다. 접대 자리라면 무리 없이
+                즐길 수 있는 평탄하고 넉넉한 코스가 분위기를 살립니다.
               </p>
             </article>
             <article className="rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
-              <h3 className="font-bold text-white">부킹 성공률을 높이는 법</h3>
+              <h3 className="font-bold text-white">회원제·대중제 구분은 부킹 전략</h3>
               <p className="mt-2 text-sm text-green-50/90">
-                인기 코스는 예약 오픈 시점을 미리 확인하고, 조인·취소표 알림 서비스를 활용하면
-                주말 부킹 성공률을 크게 높일 수 있습니다.
+                격식이 필요하면 회원제, 비회원 동반과 일정 유연성이 필요하면 대중제가 유리합니다. 자리의 성격에
+                맞춰 코스 유형부터 정하면 실패가 줄어듭니다.
               </p>
             </article>
           </div>

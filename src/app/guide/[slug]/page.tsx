@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { guides, getGuide } from "@/data/guides";
 import type { GuideBlock } from "@/types";
 import GuideCard from "@/components/ui/GuideCard";
+import AuthorBox from "@/components/ui/AuthorBox";
 import { siteConfig } from "@/config";
 
 export function generateStaticParams() {
@@ -99,7 +100,12 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
     description: guide.excerpt,
     datePublished: guide.publishedAt,
     dateModified: guide.updatedAt ?? guide.publishedAt,
-    author: { "@type": "Organization", name: siteConfig.name },
+    author: {
+      "@type": "Person",
+      name: siteConfig.author.name,
+      description: siteConfig.author.short,
+      url: `${siteConfig.url}/about`,
+    },
     publisher: { "@type": "Organization", name: siteConfig.name },
     mainEntityOfPage: `${siteConfig.url}/guide/${slug}`,
   };
@@ -135,7 +141,9 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
           <h1 className="mt-3 text-2xl font-bold leading-tight text-green-900 sm:text-3xl">
             {guide.title}
           </h1>
-          <div className="mt-3 flex items-center gap-3 text-sm text-green-900/50">
+          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-green-900/50">
+            <span className="font-medium text-green-700">글 · {siteConfig.author.name}</span>
+            <span>·</span>
             <time dateTime={guide.publishedAt}>{guide.publishedAt}</time>
             <span>·</span>
             <span>약 {guide.readingMinutes}분</span>
@@ -175,6 +183,8 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
             지역별 골프장 보기
           </Link>
         </section>
+
+        <AuthorBox className="mt-10" />
       </article>
 
       {/* 관련 가이드 */}

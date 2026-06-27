@@ -166,6 +166,47 @@ export default async function CoursePage({
           </section>
         )}
 
+        {/* 비즈니스·접대 관점 (준pro의 시선) */}
+        {note?.business && (
+          <section className="mt-8 rounded-2xl border border-green-200 bg-white p-5 sm:p-6">
+            <div className="flex items-center gap-2">
+              <span className="rounded-full bg-green-800 px-2.5 py-1 text-xs font-semibold text-white">
+                비즈니스 라운드 시선
+              </span>
+              <span className="text-xs text-green-900/50">접대·거래처 라운드 관점에서 본 장단점</span>
+            </div>
+            <p className="mt-4 font-medium text-green-900">{note.business.summary}</p>
+            <div className="mt-5 grid gap-5 sm:grid-cols-2">
+              <div className="rounded-xl bg-green-50/70 p-4">
+                <p className="text-sm font-bold text-green-700">접대 관점의 장점</p>
+                <ul className="mt-2 space-y-2">
+                  {note.business.pros.map((p, i) => (
+                    <li key={i} className="flex gap-2 text-sm leading-relaxed text-green-900/80">
+                      <span aria-hidden className="mt-0.5 shrink-0 font-bold text-green-600">＋</span>
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-xl bg-amber-50/70 p-4">
+                <p className="text-sm font-bold text-amber-700">미리 알아둘 점</p>
+                <ul className="mt-2 space-y-2">
+                  {note.business.cons.map((c, i) => (
+                    <li key={i} className="flex gap-2 text-sm leading-relaxed text-green-900/80">
+                      <span aria-hidden className="mt-0.5 shrink-0 font-bold text-amber-600">－</span>
+                      <span>{c}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p className="mt-4 text-xs text-green-900/50">
+              운영자 {siteConfig.author.name}가 비즈니스 라운드 경험을 토대로 정리한 의견이며, 실제 분위기는
+              시즌·동반자·티타임에 따라 다를 수 있습니다.
+            </p>
+          </section>
+        )}
+
         {/* 특징 */}
         <section className="mt-8">
           <h2 className="text-xl font-bold text-green-900">특징</h2>
