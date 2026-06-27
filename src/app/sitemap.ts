@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config";
 import { regions } from "@/data/regions";
 import { courses } from "@/data/courses";
+import { getCourseNote } from "@/data/courseNotes";
 import { guides } from "@/data/guides";
 import { tools } from "@/data/tools";
 
@@ -25,9 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // 상세 정보가 보강된 코스만 색인 대상으로 사이트맵에 포함합니다.
+  // 깊이 있는 리뷰(deepDive)로 보강된 주력 코스만 색인 대상으로 사이트맵에 포함합니다.
+  // (코스 상세 페이지의 noindex 기준과 동일하게 맞춥니다.)
   const coursePages: MetadataRoute.Sitemap = courses
-    .filter((c) => !c.imported)
+    .filter((c) => !c.imported && getCourseNote(c.slug)?.deepDive)
     .map((c) => ({
       url: `${base}/course/${c.slug}`,
       lastModified: now,

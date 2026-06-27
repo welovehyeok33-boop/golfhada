@@ -21,15 +21,20 @@ export async function generateMetadata({
   if (!course) return {};
 
   const region = getRegion(course.regionSlug);
+  const note = getCourseNote(slug);
   const title = `${course.name} - 그린피·코스 정보`;
   const description = `${region?.name} ${course.city} ${course.name} 정보. ${course.description.slice(0, 100)}`;
+
+  // 깊이 있는 리뷰(deepDive)가 있는 주력 코스만 색인합니다.
+  // 공공데이터 임포트 코스 및 아직 보강하지 않은 코스는 noindex로 두어 평균 품질을 지킵니다.
+  const noindex = course.imported || !note?.deepDive;
 
   return {
     title,
     description,
     alternates: { canonical: `/course/${slug}` },
     openGraph: { title, description, url: `${siteConfig.url}/course/${slug}` },
-    ...(course.imported ? { robots: { index: false, follow: true } } : {}),
+    ...(noindex ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -143,6 +148,18 @@ export default async function CoursePage({
           <h2 className="text-xl font-bold text-green-900">코스 소개</h2>
           <p className="mt-3 text-green-900/80">{course.description}</p>
         </section>
+
+        {/* 깊이 있는 코스 리뷰 (주력 코스) */}
+        {note?.deepDive && note.deepDive.length > 0 && (
+          <section className="prose-kr mt-10">
+            {note.deepDive.map((block, i) => (
+              <div key={i} className={i === 0 ? "" : "mt-8"}>
+                <h2 className="text-xl font-bold text-green-900">{block.h}</h2>
+                <p className="mt-3 leading-relaxed text-green-900/80">{block.p}</p>
+              </div>
+            ))}
+          </section>
+        )}
 
         {/* 에디터 노트 (큐레이션) */}
         {note && (
