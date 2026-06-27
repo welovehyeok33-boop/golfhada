@@ -35,9 +35,11 @@ export default function CourseCard({ course }: { course: GolfCourse }) {
             </p>
           </div>
         ) : (
-          <p className="mt-3 line-clamp-2 flex-1 text-sm leading-relaxed text-green-900/80">
-            {course.description}
-          </p>
+          <div className="mt-3 flex-1">
+            <p className="line-clamp-2 text-sm leading-relaxed text-green-900/80">
+              {course.description}
+            </p>
+          </div>
         )}
 
         {course.greenFeeWeekday && (
