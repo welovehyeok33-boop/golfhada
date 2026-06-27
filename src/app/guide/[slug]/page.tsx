@@ -173,8 +173,8 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
         <section className="mt-10 rounded-xl border border-green-100 bg-green-50 p-6">
           <h2 className="text-lg font-bold text-green-900">이제 라운드 갈 골프장을 찾아볼까요?</h2>
           <p className="mt-2 text-sm text-green-900/70">
-            지역별로 그린피와 코스 정보를 비교해 보세요. 입문자에게 부담 없는 대중제 골프장부터 명문 코스까지
-            정리되어 있습니다.
+            지역별로 그린피와 코스 정보를 비교해 보세요. 코스마다 접대·비즈니스 라운드 관점의 장단점을 함께
+            정리해 두어, 거래처를 모실 곳도 빠르게 고를 수 있습니다.
           </p>
           <Link
             href="/"

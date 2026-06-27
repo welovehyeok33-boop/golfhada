@@ -11,7 +11,8 @@ export default function Footer() {
           <div className="sm:col-span-2 md:col-span-1">
             <Logo />
             <p className="mt-2 text-sm leading-relaxed text-green-900/80">
-              전국 골프장 정보를 지역별로 정리합니다. 그린피·코스 정보와 예약 팁을 한곳에서 확인하세요.
+              비즈니스·접대 라운드의 시선으로 전국 골프장을 정리합니다. 코스별 접대 장단점과 그린피·코스 정보를
+              한곳에서 확인하세요.
             </p>
           </div>
 

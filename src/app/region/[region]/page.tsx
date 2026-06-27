@@ -20,7 +20,7 @@ export async function generateMetadata({
 
   const count = getCoursesByRegion(slug).length;
   const title = `${region.name} 골프장 정보 (${count}곳)`;
-  const description = `${region.name} 지역 골프장 ${count}곳의 그린피, 코스 정보, 예약 팁을 정리했습니다. ${region.description}`;
+  const description = `${region.name} 지역 골프장 ${count}곳의 그린피와 코스 정보, 비즈니스·접대 라운드 관점의 장단점을 정리했습니다. ${region.description}`;
 
   return {
     title,

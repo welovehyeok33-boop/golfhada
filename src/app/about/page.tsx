@@ -3,7 +3,7 @@ import { siteConfig } from "@/config";
 
 export const metadata: Metadata = {
   title: "사이트 소개",
-  description: `${siteConfig.name}는 전국 골프장 정보를 지역별로 정리해 제공하는 골프 정보 사이트입니다.`,
+  description: `${siteConfig.name}는 비즈니스·접대 라운드의 시선으로 전국 골프장을 정리하는 골프 정보 사이트입니다. 운영자 ${siteConfig.author.name}가 코스별 접대 장단점을 직접 큐레이션합니다.`,
   alternates: { canonical: "/about" },
 };
 
