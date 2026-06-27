@@ -87,7 +87,9 @@ export default function Home() {
         {/* 추천 골프장 */}
         <section className="py-12">
           <h2 className="text-xl font-bold text-green-900">이번 주 추천 골프장</h2>
-          <p className="mt-1 text-sm text-green-900/60">에디터가 엄선한 가볼 만한 코스입니다.</p>
+          <p className="mt-1 text-sm text-green-900/60">
+            에디터가 직접 골라 정리한 코스입니다. 상세 페이지마다 &lsquo;이런 분께 추천&rsquo; 메모를 더했어요.
+          </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((c) => (
               <CourseCard key={c.slug} course={c} />

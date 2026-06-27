@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { courses, getCourse, getCoursesByRegion } from "@/data/courses";
+import { getCourseNote } from "@/data/courseNotes";
 import { getRegion } from "@/data/regions";
 import CourseCard from "@/components/ui/CourseCard";
 import AdSlot from "@/components/ui/AdSlot";
@@ -45,6 +46,7 @@ export default async function CoursePage({
   if (!course) notFound();
 
   const region = getRegion(course.regionSlug);
+  const note = getCourseNote(slug);
   const related = getCoursesByRegion(course.regionSlug)
     .filter((c) => c.slug !== slug)
     .slice(0, 3);
@@ -141,6 +143,28 @@ export default async function CoursePage({
           <h2 className="text-xl font-bold text-green-900">코스 소개</h2>
           <p className="mt-3 text-green-900/80">{course.description}</p>
         </section>
+
+        {/* 에디터 노트 (큐레이션) */}
+        {note && (
+          <section className="mt-8 rounded-2xl border border-green-200 bg-green-50/60 p-5 sm:p-6">
+            <div className="flex items-center gap-2">
+              <span className="rounded-full bg-green-600 px-2.5 py-1 text-xs font-semibold text-white">
+                에디터 노트
+              </span>
+              <span className="text-xs text-green-900/50">골프하다가 직접 정리한 한 줄 메모</span>
+            </div>
+            <dl className="mt-4 space-y-4">
+              <div>
+                <dt className="text-sm font-bold text-green-800">이런 분께 추천</dt>
+                <dd className="mt-1 text-green-900/80">{note.recommendedFor}</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-bold text-green-800">코스 공략 한 줄</dt>
+                <dd className="mt-1 text-green-900/80">{note.playTip}</dd>
+              </div>
+            </dl>
+          </section>
+        )}
 
         {/* 특징 */}
         <section className="mt-8">
