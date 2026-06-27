@@ -111,35 +111,38 @@ export default function Home() {
             ))}
           </div>
         </section>
+      </div>
 
-        {/* 예약 팁 (체류시간용) */}
-        <section className="py-12">
-          <h2 className="text-xl font-bold text-green-900">골프장 예약, 이것만은 알아두세요</h2>
+      {/* 예약 팁 (체류시간용) — 진한 그린 밴드 */}
+      <section className="mt-4 bg-green-700">
+        <div className="mx-auto max-w-6xl px-4 py-14">
+          <h2 className="text-xl font-bold text-white">골프장 예약, 이것만은 알아두세요</h2>
+          <p className="mt-1 text-sm text-green-100/80">라운드 전에 알아두면 돈과 시간을 아끼는 기본기.</p>
           <div className="prose-kr mt-6 grid gap-6 md:grid-cols-3">
-            <article className="rounded-xl border border-green-100 bg-white p-6">
-              <h3 className="font-bold text-green-800">그린피는 시즌·요일에 따라 다릅니다</h3>
-              <p className="mt-2 text-sm text-green-900/80">
+            <article className="rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
+              <h3 className="font-bold text-white">그린피는 시즌·요일에 따라 다릅니다</h3>
+              <p className="mt-2 text-sm text-green-50/90">
                 봄·가을 성수기와 주말은 그린피가 크게 오릅니다. 같은 코스라도 평일 새벽·오후 시간대를
                 노리면 30% 이상 저렴하게 라운드할 수 있습니다.
               </p>
             </article>
-            <article className="rounded-xl border border-green-100 bg-white p-6">
-              <h3 className="font-bold text-green-800">대중제와 회원제의 차이</h3>
-              <p className="mt-2 text-sm text-green-900/80">
+            <article className="rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
+              <h3 className="font-bold text-white">대중제와 회원제의 차이</h3>
+              <p className="mt-2 text-sm text-green-50/90">
                 대중제(퍼블릭)는 회원권 없이 누구나 예약할 수 있고 세금 혜택으로 그린피가 낮은 편입니다.
                 회원제는 코스 관리와 예약 우선권에서 강점이 있습니다.
               </p>
             </article>
-            <article className="rounded-xl border border-green-100 bg-white p-6">
-              <h3 className="font-bold text-green-800">부킹 성공률을 높이는 법</h3>
-              <p className="mt-2 text-sm text-green-900/80">
+            <article className="rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
+              <h3 className="font-bold text-white">부킹 성공률을 높이는 법</h3>
+              <p className="mt-2 text-sm text-green-50/90">
                 인기 코스는 예약 오픈 시점을 미리 확인하고, 조인·취소표 알림 서비스를 활용하면
                 주말 부킹 성공률을 크게 높일 수 있습니다.
               </p>
             </article>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

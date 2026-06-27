@@ -53,7 +53,7 @@ export default function RootLayout({
 
   return (
     <html lang="ko" className={`${notoSansKr.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-[#14241a]">
+      <body className="min-h-full flex flex-col bg-background text-[#14241a]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
