@@ -12,6 +12,11 @@ import { siteConfig } from "@/config";
 
 export default function Home() {
   const featured = getFeaturedCourses();
+  const businessGuides = guides.filter((g) => g.category === "비즈니스·접대");
+  const featuredGuides = [
+    ...businessGuides,
+    ...guides.filter((g) => g.category !== "비즈니스·접대"),
+  ].slice(0, 3);
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
@@ -120,15 +125,17 @@ export default function Home() {
         <section className="py-12">
           <div className="flex items-end justify-between">
             <div>
-              <h2 className="text-xl font-bold text-green-900">골프 입문 가이드</h2>
-              <p className="mt-1 text-sm text-green-900/60">처음 골프를 시작하는 분을 위한 기초 지식.</p>
+              <h2 className="text-xl font-bold text-green-900">비즈니스·접대 골프 가이드</h2>
+              <p className="mt-1 text-sm text-green-900/60">
+                거래처를 모실 때 알아두면 좋은 노하우. 입문 기초 가이드도 함께 정리했습니다.
+              </p>
             </div>
             <Link href="/guide" className="shrink-0 text-sm font-medium text-green-600 hover:text-green-700">
               전체 보기 →
             </Link>
           </div>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {guides.slice(0, 3).map((g) => (
+            {featuredGuides.map((g) => (
               <GuideCard key={g.slug} guide={g} />
             ))}
           </div>

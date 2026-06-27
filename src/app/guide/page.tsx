@@ -6,13 +6,13 @@ import AdSlot from "@/components/ui/AdSlot";
 import { siteConfig } from "@/config";
 
 export const metadata: Metadata = {
-  title: "골프 가이드 — 입문자를 위한 기초 지식",
+  title: "골프 가이드 — 입문 기초부터 비즈니스·접대 라운드까지",
   description:
-    "골프 시작하는 법, 용어 정리, 스코어 보는 법, 입문 비용까지. 처음 골프를 접하는 분을 위한 기초 가이드를 모았습니다.",
+    "골프 시작하는 법, 용어·스코어·비용 같은 기초부터 거래처 접대 골프장 고르는 법, 접대 매너·비용 정산까지. 입문자와 비즈니스 라운드를 모두 위한 가이드를 모았습니다.",
   alternates: { canonical: "/guide" },
   openGraph: {
-    title: "골프 가이드 — 입문자를 위한 기초 지식",
-    description: "골프 입문자를 위한 기초 가이드 모음",
+    title: "골프 가이드 — 입문 기초부터 비즈니스·접대 라운드까지",
+    description: "골프 입문 기초와 비즈니스·접대 라운드 가이드 모음",
     url: `${siteConfig.url}/guide`,
   },
 };
@@ -46,8 +46,8 @@ export default function GuideIndexPage() {
         <header className="mt-4">
           <h1 className="text-2xl font-bold text-green-900 sm:text-3xl">골프 가이드</h1>
           <p className="mt-3 max-w-2xl leading-relaxed text-green-900/70">
-            골프를 처음 시작하는 분을 위한 기초 지식을 정리했습니다. 시작하는 법부터 용어, 스코어, 비용까지
-            궁금한 것부터 읽어보세요.
+            골프를 처음 시작하는 분을 위한 기초 지식부터, 거래처를 모시는 비즈니스·접대 라운드 노하우까지
+            정리했습니다. 궁금한 것부터 읽어보세요.
           </p>
         </header>
 
