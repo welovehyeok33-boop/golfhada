@@ -68,6 +68,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 숫자 띠 */}
+      <section className="border-b border-green-100 bg-white">
+        <div className="mx-auto grid max-w-6xl grid-cols-3 divide-x divide-green-100 px-4">
+          <div className="py-6 text-center">
+            <div className="text-2xl font-bold text-green-700 sm:text-3xl">{courses.length}</div>
+            <div className="mt-1 text-xs text-green-900/60 sm:text-sm">전국 골프장</div>
+          </div>
+          <div className="py-6 text-center">
+            <div className="text-2xl font-bold text-green-700 sm:text-3xl">{guides.length}</div>
+            <div className="mt-1 text-xs text-green-900/60 sm:text-sm">골프 가이드</div>
+          </div>
+          <div className="py-6 text-center">
+            <div className="text-2xl font-bold text-green-700 sm:text-3xl">{tools.length}</div>
+            <div className="mt-1 text-xs text-green-900/60 sm:text-sm">골프 계산기</div>
+          </div>
+        </div>
+      </section>
+
       <div className="mx-auto max-w-6xl px-4">
         {/* 지역 그리드 */}
         <section className="py-12">
