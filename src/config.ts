@@ -17,7 +17,7 @@ export const siteConfig = {
   ],
   // 애드센스 승인 후 발급받은 client ID를 넣으면 광고가 활성화됩니다. (예: ca-pub-XXXXXXXXXXXX)
   adsenseClient: "",
-  contactEmail: "welovehyeok33@gmail.com",
+  contactEmail: "sina1732@nate.com",
   author: {
     name: "준pro",
     // 프로골퍼가 아니라, 비즈니스 라운드를 자주 다닌 사업가라는 점을 명확히 합니다.
