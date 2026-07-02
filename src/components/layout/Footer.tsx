@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { regions } from "@/data/regions";
+import { countByRegion } from "@/data/courses";
 import { siteConfig } from "@/config";
 import Logo from "@/components/ui/Logo";
 
 export default function Footer() {
+  // 노출 중인 코스가 있는 지역만 링크(빈 "준비 중" 페이지 노출 방지).
+  const listedRegions = regions.filter((r) => countByRegion(r.slug) > 0);
+
   return (
     <footer className="mt-16 border-t border-green-100 bg-green-50">
       <div className="mx-auto max-w-6xl px-4 py-10">
@@ -19,7 +23,7 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-bold text-green-800">지역별 골프장</h3>
             <ul className="mt-3 grid grid-cols-2 gap-1 text-sm text-green-900/80">
-              {regions.map((r) => (
+              {listedRegions.map((r) => (
                 <li key={r.slug}>
                   <Link href={`/region/${r.slug}`} className="hover:text-green-600">
                     {r.shortName}
