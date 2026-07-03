@@ -31,7 +31,7 @@ export default function HandicapCalculator() {
   const removeRow = (i: number) => setScores(scores.filter((_, idx) => idx !== i));
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5 shadow-sm sm:p-6">
+    <div className="rounded-2xl border border-green-100 bg-cream p-5 shadow-sm sm:p-6">
       {/* 코스 파 */}
       <div className="flex items-center justify-between gap-3">
         <label className="text-sm font-medium text-green-900">코스 파(Par)</label>

@@ -6,7 +6,7 @@ export default function GuideCard({ guide }: { guide: GuideArticle }) {
   return (
     <Link
       href={`/guide/${guide.slug}`}
-      className="group flex flex-col overflow-hidden rounded-xl border border-green-100 bg-white transition hover:border-green-300 hover:shadow-md"
+      className="group flex flex-col overflow-hidden rounded-xl border border-green-100 bg-cream transition hover:border-green-300 hover:shadow-md"
     >
       {guide.coverImage && (
         <div className="relative aspect-[16/9] w-full overflow-hidden">

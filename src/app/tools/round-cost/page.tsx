@@ -96,7 +96,7 @@ export default function RoundCostPage() {
         </div>
       </section>
 
-      <div className="mt-10 rounded-xl border border-green-100 bg-white p-5">
+      <div className="mt-10 rounded-xl border border-green-100 bg-cream p-5">
         <p className="text-sm font-medium text-green-900">함께 보면 좋은 페이지</p>
         <div className="mt-3 flex flex-wrap gap-2 text-sm">
           <Link href="/guide" className="rounded-full bg-green-50 px-3 py-1.5 text-green-700 hover:bg-green-100">

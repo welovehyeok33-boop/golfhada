@@ -9,7 +9,7 @@ export default function CourseCard({ course }: { course: GolfCourse }) {
   return (
     <Link
       href={`/course/${course.slug}`}
-      className="group flex flex-col overflow-hidden rounded-xl border border-green-100 bg-white transition hover:border-green-300 hover:shadow-md"
+      className="group flex flex-col overflow-hidden rounded-xl border border-green-100 bg-cream transition hover:border-green-300 hover:shadow-md"
     >
       <div className="h-1.5 bg-gradient-to-r from-green-500 to-green-700" />
 

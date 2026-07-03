@@ -125,19 +125,19 @@ export default async function CoursePage({
 
         {/* 핵심 정보 카드 */}
         <dl className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <div className="rounded-xl border border-green-100 bg-white p-4">
+          <div className="rounded-xl border border-green-100 bg-cream p-4">
             <dt className="text-xs text-green-900/50">평일 그린피</dt>
             <dd className="mt-1 font-bold text-green-800">{feeText(course.greenFeeWeekday)}</dd>
           </div>
-          <div className="rounded-xl border border-green-100 bg-white p-4">
+          <div className="rounded-xl border border-green-100 bg-cream p-4">
             <dt className="text-xs text-green-900/50">주말 그린피</dt>
             <dd className="mt-1 font-bold text-green-800">{feeText(course.greenFeeWeekend)}</dd>
           </div>
-          <div className="rounded-xl border border-green-100 bg-white p-4">
+          <div className="rounded-xl border border-green-100 bg-cream p-4">
             <dt className="text-xs text-green-900/50">홀 수</dt>
             <dd className="mt-1 font-bold text-green-800">{course.holes > 0 ? `${course.holes}홀` : "연습장"}</dd>
           </div>
-          <div className="rounded-xl border border-green-100 bg-white p-4">
+          <div className="rounded-xl border border-green-100 bg-cream p-4">
             <dt className="text-xs text-green-900/50">운영 형태</dt>
             <dd className="mt-1 font-bold text-green-800">{course.type}</dd>
           </div>
@@ -185,7 +185,7 @@ export default async function CoursePage({
 
         {/* 비즈니스·접대 관점 (준pro의 시선) */}
         {note?.business && (
-          <section className="mt-8 rounded-2xl border border-green-200 bg-white p-5 sm:p-6">
+          <section className="mt-8 rounded-2xl border border-green-200 bg-cream p-5 sm:p-6">
             <div className="flex items-center gap-2">
               <span className="rounded-full bg-green-800 px-2.5 py-1 text-xs font-semibold text-white">
                 비즈니스 라운드 시선
@@ -244,7 +244,7 @@ export default async function CoursePage({
             <h2 className="text-xl font-bold text-green-900">주변 가볼 만한 곳</h2>
             <ul className="mt-3 grid gap-2 sm:grid-cols-3">
               {course.nearby.map((n) => (
-                <li key={n} className="rounded-lg border border-green-100 bg-white px-4 py-3 text-sm text-green-900/80">
+                <li key={n} className="rounded-lg border border-green-100 bg-cream px-4 py-3 text-sm text-green-900/80">
                   {n}
                 </li>
               ))}

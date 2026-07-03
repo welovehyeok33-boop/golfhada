@@ -75,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* 숫자 띠 */}
-      <section className="border-b border-green-100 bg-white">
+      <section className="border-b border-green-100 bg-cream">
         <div className="mx-auto grid max-w-6xl grid-cols-3 divide-x divide-green-100 px-4">
           <div className="py-6 text-center">
             <div className="text-2xl font-bold text-green-700 sm:text-3xl">{listedCourses.length}</div>
@@ -158,7 +158,7 @@ export default function Home() {
               <Link
                 key={t.slug}
                 href={`/tools/${t.slug}`}
-                className="group flex flex-col rounded-xl border border-green-100 bg-white p-5 transition hover:border-green-300 hover:shadow-md"
+                className="group flex flex-col rounded-xl border border-green-100 bg-cream p-5 transition hover:border-green-300 hover:shadow-md"
               >
                 <span className="w-fit rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-600">
                   {t.tagline}

@@ -55,7 +55,7 @@ export default function ToolsIndexPage() {
             <Link
               key={t.slug}
               href={`/tools/${t.slug}`}
-              className="group flex flex-col rounded-xl border border-green-100 bg-white p-5 transition hover:border-green-300 hover:shadow-md"
+              className="group flex flex-col rounded-xl border border-green-100 bg-cream p-5 transition hover:border-green-300 hover:shadow-md"
             >
               <span className="w-fit rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-600">
                 {t.tagline}

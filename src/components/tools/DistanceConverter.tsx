@@ -22,7 +22,7 @@ export default function DistanceConverter() {
   };
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5 shadow-sm sm:p-6">
+    <div className="rounded-2xl border border-green-100 bg-cream p-5 shadow-sm sm:p-6">
       <div className="grid grid-cols-1 items-end gap-3 sm:grid-cols-[1fr_auto_1fr]">
         <div className="flex flex-col gap-1.5">
           <label className="text-sm font-medium text-green-900">야드 (yd)</label>

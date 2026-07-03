@@ -5,7 +5,7 @@ export default function RegionCard({ region, count }: { region: Region; count: n
   return (
     <Link
       href={`/region/${region.slug}`}
-      className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-br from-white to-green-50 px-5 py-4 transition hover:-translate-y-0.5 hover:border-green-300 hover:shadow-md"
+      className="group relative overflow-hidden rounded-xl border border-green-100 bg-gradient-to-br from-cream to-green-50 px-5 py-4 transition hover:-translate-y-0.5 hover:border-green-300 hover:shadow-md"
     >
       <div className="flex items-center justify-between">
         <span className="text-base font-bold text-green-900 group-hover:text-green-700">

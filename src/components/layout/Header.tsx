@@ -4,7 +4,7 @@ import Logo from "@/components/ui/Logo";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-green-100 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-green-100 bg-cream/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Logo className="shrink-0" />
 
