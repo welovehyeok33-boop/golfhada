@@ -2,14 +2,14 @@
 
 @theme inline {
   /* 고풍스러운 연한 연두 배경 + 따뜻한 아이보리 표면 */
-  --color-background: #e2ebc4;
+  --color-background: #e8eed0;
   --color-foreground: #1f2c18;
-  --color-cream: #eff2da;
+  --color-cream: #f4f6e6;
   --font-sans: var(--font-noto-sans-kr), ui-sans-serif, system-ui, sans-serif;
 
   /* 골프 그린 팔레트 (저채도 틴트는 따뜻한 세이지로) */
-  --color-green-50: #e7efcf;
-  --color-green-100: #d5e2b3;
+  --color-green-50: #edf2da;
+  --color-green-100: #dde7c1;
   --color-green-200: #bbe8c6;
   --color-green-300: #8ad6a0;
   --color-green-400: #54bd75;
