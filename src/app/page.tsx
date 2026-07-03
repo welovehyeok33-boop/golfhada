@@ -1,18 +1,25 @@
 import Link from "next/link";
 import Image from "next/image";
-import { regions } from "@/data/regions";
+import { regions, getRegion } from "@/data/regions";
 import { listedCourses, countByRegion, getFeaturedCourses } from "@/data/courses";
 import { guides } from "@/data/guides";
 import { tools } from "@/data/tools";
 import RegionCard from "@/components/ui/RegionCard";
 import CourseCard from "@/components/ui/CourseCard";
 import GuideCard from "@/components/ui/GuideCard";
+import CourseSearch from "@/components/ui/CourseSearch";
 import AdSlot from "@/components/ui/AdSlot";
 import { siteConfig } from "@/config";
 
 export default function Home() {
   const featured = getFeaturedCourses();
   const listedRegions = regions.filter((r) => countByRegion(r.slug) > 0);
+  const searchItems = listedCourses.map((c) => ({
+    name: c.name,
+    slug: c.slug,
+    region: getRegion(c.regionSlug)?.name ?? "",
+    city: c.city,
+  }));
   const businessGuides = guides.filter((g) => g.category === "비즈니스·접대");
   const featuredGuides = [
     ...businessGuides,
@@ -71,6 +78,8 @@ export default function Home() {
               운영자 소개
             </Link>
           </div>
+
+          <CourseSearch items={searchItems} />
         </div>
       </section>
 
