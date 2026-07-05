@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { regions, getRegion } from "@/data/regions";
-import { getCoursesByRegion } from "@/data/courses";
+import { getCoursesByRegion, countByRegion } from "@/data/courses";
 import CourseCard from "@/components/ui/CourseCard";
 import AdSlot from "@/components/ui/AdSlot";
 import { siteConfig } from "@/config";
@@ -102,7 +102,7 @@ export default async function RegionPage({
           <h2 className="text-lg font-bold text-green-900">다른 지역 골프장</h2>
           <ul className="mt-4 flex flex-wrap gap-2">
             {regions
-              .filter((r) => r.slug !== slug)
+              .filter((r) => r.slug !== slug && countByRegion(r.slug) > 0)
               .map((r) => (
                 <li key={r.slug}>
                   <Link

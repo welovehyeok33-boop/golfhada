@@ -43,8 +43,8 @@ export default function PrivacyPolicyPage() {
 
       <h2 className="mt-10 text-xl font-bold text-green-900">3. 분석 도구</h2>
       <p className="mt-4 text-green-900/80">
-        본 사이트는 방문자 통계 분석을 위해 Google Analytics 등의 분석 도구를 사용할 수 있습니다. 이를 통해
-        수집되는 정보는 익명으로 처리되며 개인을 식별하는 데 사용되지 않습니다.
+        본 사이트는 서비스 개선을 위해 향후 Google Analytics와 같은 방문자 통계 분석 도구를 도입할 수 있습니다.
+        이러한 도구를 통해 수집되는 정보는 익명으로 처리되며 개인을 식별하는 데 사용되지 않습니다.
       </p>
 
       <h2 className="mt-10 text-xl font-bold text-green-900">4. 개인정보의 제3자 제공</h2>
