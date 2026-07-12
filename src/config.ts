@@ -16,7 +16,7 @@ export const siteConfig = {
     "골프장 예약",
   ],
   // 애드센스 승인 후 발급받은 client ID를 넣으면 광고가 활성화됩니다. (예: ca-pub-XXXXXXXXXXXX)
-  adsenseClient: "",
+  adsenseClient: "ca-pub-3294285861978354",
   contactEmail: "sina1732@nate.com",
   author: {
     name: "준pro",
