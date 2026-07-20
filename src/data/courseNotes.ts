@@ -129,10 +129,10 @@ export const courseNotes: Record<string, CourseNote> = {
         p: "을왕리 해수욕장과 조개구이 같은 먹거리가 가까워 라운드 후 자리로 잇기 좋습니다. 공항철도와 고속도로로 서울에서 접근이 편한 것도 장점입니다.",
       },
     ],
-    recommendedFor: "공항 근처에서 다양한 코스를 골라 치고 싶은 분",
+    recommendedFor: "공항 근처에서 여러 코스를 골라 치는 재미를 아는 분",
     playTip: "바닷바람이 강한 편이라 평소보다 한 클럽 넉넉히 잡는 게 안전합니다.",
     business: {
-      summary: "인천공항 옆 대형 대중제라, 격식보다 편의와 접근성이 우선인 지방·해외 거래처 자리에 맞습니다.",
+      summary: "인천공항 옆 대형 대중제라, 격식보다 편의와 접근성이 우선인 지방·해외 거래처 자리에 알맞은 선택입니다.",
       pros: [
         "인천공항과 가까워 지방이나 해외에서 오는 거래처와 묶어 일정을 잡기 좋습니다.",
         "대중제라 부킹이 비교적 수월하고, 비회원 동반에 제약이 적어 자리 잡기가 편합니다.",
@@ -273,7 +273,7 @@ export const courseNotes: Record<string, CourseNote> = {
     recommendedFor: "서해 바다 경관 속에서 탁 트인 라운드를 원하는 분",
     playTip: "해풍이 부는 날은 낮고 강한 탄도로 공략하면 거리 손실을 줄일 수 있습니다.",
     business: {
-      summary: "서해 바다 경관이 시원해, 풍경으로 인상을 남기고 싶은 접대에 어울립니다.",
+      summary: "서해 바다 경관이 시원해, 풍경으로 인상을 남기고 싶은 접대에 제격입니다.",
       pros: [
         "탁 트인 바다 경관이 있어 동반자에게 색다른 인상을 남깁니다.",
         "충남 서해안권이라 수도권 서부에서 접근이 가능합니다.",
@@ -290,7 +290,7 @@ export const courseNotes: Record<string, CourseNote> = {
     recommendedFor: "국내에서 링크스 스타일을 맛보고 싶은 분",
     playTip: "벙커와 러프가 까다로워 무리한 우드보다 안정적인 아이언 운영이 유리합니다.",
     business: {
-      summary: "국내 보기 드문 링크스라 특별한 경험을 강조하고 싶은 자리에 어울립니다.",
+      summary: "국내 보기 드문 링크스라, 특별한 경험을 강조하고 싶은 자리에서 빛을 봅니다.",
       pros: [
         "흔치 않은 링크스 스타일이라 골프 좋아하는 동반자에게 신선한 자리가 됩니다.",
         "독특한 코스 콘셉트가 대화 소재가 되어 분위기를 살립니다.",
@@ -383,7 +383,7 @@ export const courseNotes: Record<string, CourseNote> = {
         p: "해운대와 오시리아 관광단지, 기장 대게가 가까워 라운드 후 자리로 잇기 좋습니다. 부산 도심에서 가까워 시내 거래처와 동선을 맞추기 편합니다.",
       },
     ],
-    recommendedFor: "부산 도심에서 대회가 열린 코스를 경험하고 싶은 분",
+    recommendedFor: "부산 도심에서 대회가 열린 코스를 눈여겨보는 분",
     playTip: "기장 해안 바람이 변수라 티타임대 풍향을 미리 살펴두면 좋습니다.",
     business: {
       summary: "부산 도심에서 가깝고 대회까지 치른 코스여서, 부산권 거래처와 부담 없이 격을 맞추기 좋습니다.",
@@ -544,7 +544,7 @@ export const courseNotes: Record<string, CourseNote> = {
         p: "오설록 티뮤지엄, 협재 해수욕장, 한림공원이 가까워 라운드 전후를 풍성하게 채울 수 있습니다. 제주라는 입지 특성상 항공 일정을 여유 있게 두고 1박 이상으로 구성하는 편이 안전합니다.",
       },
     ],
-    recommendedFor: "PGA 무대가 열린 최상급 코스를 동경하는 분",
+    recommendedFor: "PGA 무대가 열린 최상급 코스에 마음이 가는 분",
     playTip: "스코틀랜드풍 깊은 벙커는 탈출이 어려워 처음부터 피해 가는 설계가 유리합니다.",
     business: {
       summary: "PGA를 치른 국내 최상급 코스. 정말 중요한 한 분을 모실 때 그 무게가 어울립니다.",
@@ -564,7 +564,7 @@ export const courseNotes: Record<string, CourseNote> = {
     recommendedFor: "제주 여행 중 가성비 좋은 대중제를 찾는 분",
     playTip: "제주 특유의 바람이 부는 날은 탄도를 낮춰 안정적으로 굴려보세요.",
     business: {
-      summary: "제주 가성비 대중제라, 격식보다 편하게 즐기는 제주 동반 라운드에 맞습니다.",
+      summary: "제주 가성비 대중제라, 격식보다 편하게 즐기는 제주 동반 라운드로 무난합니다.",
       pros: [
         "대중제라 부킹과 비회원 동반이 자유롭습니다.",
         "가성비가 좋아 가벼운 동반·실무 자리에 부담이 없습니다.",
@@ -661,7 +661,7 @@ export const courseNotes: Record<string, CourseNote> = {
     recommendedFor: "수도권 동남부에서 품격 있는 회원제를 찾는 분",
     playTip: "산지 코스라 평지 라이가 드물어 경사 어드레스 연습이 도움이 됩니다.",
     business: {
-      summary: "품격 있는 회원제에 리조트 일정까지 붙일 수 있어, 격식과 여유를 함께 챙기는 접대에 좋습니다.",
+      summary: "품격 있는 회원제에 리조트 일정까지 붙일 수 있어, 격식과 여유를 함께 챙기는 접대에 제격입니다.",
       pros: [
         "수도권 동남부라 서울·경기 동반자 접근성이 좋습니다.",
         "회원제라 관리와 격식이 안정적입니다.",
@@ -726,7 +726,7 @@ export const courseNotes: Record<string, CourseNote> = {
     recommendedFor: "제주에서 코스 선택 폭이 넓은 대중제를 찾는 분",
     playTip: "오름 지형을 따라 굴곡이 있어 내리막 홀에서 거리 계산에 유의하세요.",
     business: {
-      summary: "제주 대형 대중제라 선택 폭이 넓어, 단체·동반 구성이 자유로운 자리에 좋습니다.",
+      summary: "제주 대형 대중제라 선택 폭이 넓어, 단체·동반 구성이 자유로운 자리에 적합합니다.",
       pros: [
         "코스가 여러 개라 동반자 구력과 인원에 맞춰 구성하기 좋습니다.",
         "대중제라 부킹과 비회원 동반이 자유롭습니다.",
@@ -743,7 +743,7 @@ export const courseNotes: Record<string, CourseNote> = {
     recommendedFor: "제주 곶자왈 원시림 속 라운드를 원하는 분",
     playTip: "숲이 페어웨이를 좁게 감싸 티샷은 거리보다 정확성을 우선하세요.",
     business: {
-      summary: "제주 곶자왈 원시림 경관이 독특해, 인상을 남기는 제주 접대에 어울립니다.",
+      summary: "제주 곶자왈 원시림 경관이 독특해, 인상을 남기는 제주 접대 카드로 씁니다.",
       pros: [
         "곶자왈 원시림 경관이 독특해 동반자에게 색다른 인상을 남깁니다.",
         "코스 관리와 격이 안정적이라 비중 있는 자리에 무난합니다.",
@@ -757,10 +757,10 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "the-players-chuncheon": {
-    recommendedFor: "수도권 동부·춘천권에서 즐기는 휴양형 라운드를 찾는 분",
+    recommendedFor: "수도권 동부·춘천권에서 즐기는 휴양형 라운드를 반기는 분",
     playTip: "북한강 조망 홀이 많아 바람 영향을 받는 곳에서 클럽을 한 단계 올려보세요.",
     business: {
-      summary: "춘천권 휴양형이라, 서울 동부 거래처와 여유 있는 접대에 어울립니다.",
+      summary: "춘천권 휴양형이라, 서울 동부 거래처와 여유 있게 도는 자리에 제격입니다.",
       pros: [
         "북한강 경관이 좋아 라운드 분위기가 여유롭습니다.",
         "서울 동부에서 접근성이 무난해 일정 잡기 좋습니다.",
@@ -805,10 +805,10 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "jade-palace-gc": {
-    recommendedFor: "춘천권에서 잘 관리된 회원제를 원하는 분",
+    recommendedFor: "춘천권에서 잘 관리된 회원제를 선호하는 분",
     playTip: "수림이 빽빽해 페어웨이를 벗어나면 리스크가 커지니 방향성에 집중하세요.",
     business: {
-      summary: "그렉 노먼이 설계한 춘천 회원제라, 차분한 격식이 필요한 강원권 접대에 잘 맞습니다.",
+      summary: "그렉 노먼이 설계한 춘천 회원제라, 차분한 격식이 필요한 강원권 접대에 든든합니다.",
       pros: [
         "관리가 좋은 회원제라 격식 있는 자리에 어울립니다.",
         "빽빽한 수림이 차분한 접대 분위기를 만듭니다.",
@@ -836,10 +836,10 @@ export const courseNotes: Record<string, CourseNote> = {
     ],
   },
   "vision-hills-cc": {
-    recommendedFor: "수도권 남부에서 한적한 회원제를 찾는 분",
+    recommendedFor: "수도권 남부에서 한적한 회원제를 선호하는 분",
     playTip: "낙차 있는 홀이 많아 오르막·내리막 거리 보정을 미리 계산해두세요.",
     business: {
-      summary: "한적하게 운영되는 남양주 회원제라, 방해 없이 대화에 집중하는 조용한 접대에 알맞습니다.",
+      summary: "한적하게 운영되는 남양주 회원제라, 방해 없이 대화에 집중하는 조용한 접대에 강합니다.",
       pros: [
         "한적한 회원제라 방해 없이 대화하는 접대가 가능합니다.",
         "수도권 남부라 서울·경기 남부 동반자 접근성이 좋습니다.",
@@ -867,7 +867,7 @@ export const courseNotes: Record<string, CourseNote> = {
     ],
   },
   "ananti-club-seoul": {
-    recommendedFor: "수도권에서 리조트형 프리미엄 라운드를 원하는 분",
+    recommendedFor: "수도권 리조트형 프리미엄 라운드를 눈여겨보는 분",
     playTip: "산세를 살린 코스라 평탄한 라이가 드물어 경사 대응이 스코어를 가릅니다.",
     business: {
       summary: "라운드와 휴양을 한 흐름으로 이어 갈 수 있어, 하루를 온전히 비워 모시는 프리미엄 접대에 강합니다.",
@@ -929,7 +929,7 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "lexfield-cc": {
-    recommendedFor: "여주권에서 잘 다듬어진 회원제를 원하는 분",
+    recommendedFor: "여주권에서 잘 다듬어진 회원제를 선호하는 분",
     playTip: "그린 굴곡이 섬세해 핀 위치에 맞춘 어프로치 거리 조절이 핵심입니다.",
     business: {
       summary: "여주권 잘 다듬어진 회원제라, 격식 있는 수도권 동부 접대에 무난합니다.",
@@ -963,7 +963,7 @@ export const courseNotes: Record<string, CourseNote> = {
     recommendedFor: "땅끝 해남에서 바다 링크스를 경험하고 싶은 분",
     playTip: "해풍이 상시 부는 링크스라 낮은 탄도의 펀치샷을 준비하면 좋습니다.",
     business: {
-      summary: "해남 바다를 낀 링크스라, 흔치 않은 경험을 앞세우고 싶은 자리에 어울립니다.",
+      summary: "해남 바다를 낀 링크스라, 흔치 않은 경험을 앞세우고 싶은 자리에 안성맞춤입니다.",
       pros: [
         "바다 링크스라 골프 좋아하는 동반자에게 신선한 자리가 됩니다.",
         "탁 트인 해안 경관이 인상적입니다.",
@@ -980,7 +980,7 @@ export const courseNotes: Record<string, CourseNote> = {
     recommendedFor: "여수 바다 섬에서 휴양 라운드를 즐기려는 분",
     playTip: "바다로 둘러싸여 바람이 변수라 안전한 클럽으로 페어웨이를 지키세요.",
     business: {
-      summary: "여수 섬 휴양형이라, 관광을 겸한 여유로운 남해권 접대에 어울립니다.",
+      summary: "여수 섬 휴양형이라, 관광을 겸한 여유로운 남해권 접대로 안성맞춤입니다.",
       pros: [
         "바다로 둘러싸인 경관이 뛰어나 동반자 만족도가 높습니다.",
         "여수 여행·휴양 일정과 묶어 1박 자리로 구성하기 좋습니다.",
@@ -994,7 +994,7 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "grand-cc-cheongju": {
-    recommendedFor: "청주권에서 격식 있는 회원제를 찾는 분",
+    recommendedFor: "청주권에서 격식 있는 회원제를 눈여겨보는 분",
     playTip: "전장이 넉넉해 드라이버 거리보다 두 번째 샷의 정확성이 중요합니다.",
     business: {
       summary: "청주권 격식 있는 회원제라, 충청권 거래처를 격을 갖춰 모시기 좋습니다.",
@@ -1011,10 +1011,10 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "ananti-jungang-jincheon": {
-    recommendedFor: "충북에서 조용한 회원제 라운드를 원하는 분",
+    recommendedFor: "충북에서 조용한 회원제 라운드를 반기는 분",
     playTip: "기복 있는 코스라 라이별 어드레스 적응이 스코어를 좌우합니다.",
     business: {
-      summary: "충북 조용한 회원제라, 방해 없이 차분하게 모시는 접대에 잘 맞습니다.",
+      summary: "충북 조용한 회원제라, 방해 없이 차분하게 모시는 접대에 강합니다.",
       pros: [
         "한적한 회원제라 조용하게 대화하는 접대가 가능합니다.",
         "관리와 격식이 안정적입니다.",
@@ -1028,10 +1028,10 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "imperial-lake-chungju": {
-    recommendedFor: "충주 호반 경관 속 대중제를 찾는 분",
+    recommendedFor: "충주 호반 경관 속 대중제를 즐기는 분",
     playTip: "워터해저드가 시야에 들어오는 홀에서는 욕심을 버리고 페어웨이를 노리세요.",
     business: {
-      summary: "충주 호반 경관 대중제라, 편하게 즐기는 중부권 동반 라운드에 맞습니다.",
+      summary: "충주 호반 경관 대중제라, 편하게 즐기는 중부권 동반 라운드로 무난합니다.",
       pros: [
         "호반 경관이 좋아 라운드 분위기가 시원합니다.",
         "대중제라 부킹과 비회원 동반이 자유롭습니다.",
@@ -1045,7 +1045,7 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "sejong-emerson-cc": {
-    recommendedFor: "세종·대전권에서 회원제 라운드를 원하는 분",
+    recommendedFor: "세종·대전권에서 회원제 라운드를 즐기는 분",
     playTip: "코스가 넓게 펼쳐져 전반 몇 홀은 거리감을 맞추는 워밍업으로 활용하세요.",
     business: {
       summary: "세종·대전권 회원제라, 행정·중부권 거래처 접대에 격을 갖추기 좋습니다.",
@@ -1062,7 +1062,7 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "sejong-raycastle": {
-    recommendedFor: "세종권에서 접근성 좋은 대중제를 찾는 분",
+    recommendedFor: "세종권에서 접근성 좋은 대중제를 반기는 분",
     playTip: "평탄한 편이라 일정한 템포 유지가 미스 방지의 핵심입니다.",
     business: {
       summary: "세종권 접근성 좋은 대중제라, 가벼운 실무 접대에 부담이 없습니다.",
@@ -1082,7 +1082,7 @@ export const courseNotes: Record<string, CourseNote> = {
     recommendedFor: "대전 유성 온천과 함께 라운드를 즐기려는 분",
     playTip: "도심 근교 코스라 좁은 홀에서는 방향성을 우선하면 안정적입니다.",
     business: {
-      summary: "유성온천을 라운드에 곁들일 수 있어, 휴양을 겸한 중부권 접대에 어울립니다.",
+      summary: "유성온천을 라운드에 곁들일 수 있어, 휴양을 겸한 중부권 접대에 강점이 있습니다.",
       pros: [
         "유성 온천과 가까워 라운드 외 일정을 함께 구성하기 좋습니다.",
         "대전 도심 근교라 접근성이 좋습니다.",
@@ -1110,10 +1110,10 @@ export const courseNotes: Record<string, CourseNote> = {
     ],
   },
   "guni-cc": {
-    recommendedFor: "대구권에서 부담 없는 대중제를 찾는 분",
+    recommendedFor: "대구권에서 부담 없는 대중제를 선호하는 분",
     playTip: "그린 스피드가 빠른 편이라 첫 홀부터 거리감을 맞춰두세요.",
     business: {
-      summary: "대구권 대중제라 부킹이 수월하고, 가벼운 영남권 실무 접대에 맞습니다.",
+      summary: "대구권 대중제라 부킹이 수월하고, 가벼운 영남권 실무 접대에 안성맞춤입니다.",
       pros: [
         "대중제라 부킹과 비회원 동반이 자유롭습니다.",
         "대구권 접근성이 좋아 영남권 일정에 맞추기 좋습니다.",
@@ -1127,7 +1127,7 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "eodeungsan-cc": {
-    recommendedFor: "광주 도심에서 가까운 대중제를 원하는 분",
+    recommendedFor: "광주 도심에서 가까운 대중제를 반기는 분",
     playTip: "산자락 코스라 오르막 홀에서 클럽을 넉넉히 잡는 편이 안전합니다.",
     business: {
       summary: "광주 도심 근교 대중제라, 호남권 가벼운 접대에 접근성이 좋습니다.",
@@ -1144,10 +1144,10 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "baystars-cc": {
-    recommendedFor: "울산권에서 캐주얼하게 즐기는 대중제를 찾는 분",
+    recommendedFor: "울산권에서 캐주얼하게 즐기는 대중제를 반기는 분",
     playTip: "전장이 길지 않아 숏게임에서 스코어를 만들 기회가 많습니다.",
     business: {
-      summary: "울산권 캐주얼 대중제라, 부담 없는 실무 동반 라운드에 맞습니다.",
+      summary: "울산권 캐주얼 대중제라, 부담 없는 실무 동반 라운드로 적당합니다.",
       pros: [
         "대중제라 부킹과 비회원 동반이 자유롭습니다.",
         "전장이 길지 않아 구력 짧은 동반자도 편하게 즐깁니다.",
@@ -1161,7 +1161,7 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "gunsan-cc": {
-    recommendedFor: "코스 선택 폭이 넓은 대형 골프장을 원하는 분",
+    recommendedFor: "코스 선택 폭이 넓은 대형 골프장을 눈여겨보는 분",
     playTip: "코스마다 성격이 달라 예약한 코스의 특징을 미리 확인해두면 좋습니다.",
     business: {
       summary: "81홀 대형 코스라 인원과 구력에 맞춰 코스를 골라 배치할 수 있어, 단체 접대 일정을 짜기 수월합니다.",
@@ -1192,10 +1192,10 @@ export const courseNotes: Record<string, CourseNote> = {
     ],
   },
   "iksan-cc": {
-    recommendedFor: "전북 익산권에서 가까운 대중제를 찾는 분",
+    recommendedFor: "전북 익산권에서 가까운 대중제를 눈여겨보는 분",
     playTip: "평탄한 레이아웃이라 꾸준한 페이스로 큰 실수를 줄이는 것이 중요합니다.",
     business: {
-      summary: "익산권 대중제라 접근성이 좋고, 가벼운 전북권 동반 라운드에 맞습니다.",
+      summary: "익산권 대중제라 접근성이 좋고, 가벼운 전북권 동반 라운드는 부담이 없습니다.",
       pros: [
         "익산권 접근성이 좋아 전북권 일정에 맞추기 좋습니다.",
         "대중제라 부킹과 비회원 동반이 자유롭습니다.",
@@ -1209,10 +1209,10 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "mauna-ocean-cc": {
-    recommendedFor: "경주 동해 바다 조망 라운드를 원하는 분",
+    recommendedFor: "경주 동해 바다 조망 라운드를 즐기는 분",
     playTip: "바다 쪽 홀은 바람이 강해 탄도를 낮춰 공략하면 거리 손실이 적습니다.",
     business: {
-      summary: "경주 동해 바다 조망이 시원해, 풍경으로 인상을 남기는 영남권 접대에 어울립니다.",
+      summary: "경주 동해 바다 조망이 시원해, 풍경으로 인상을 남기는 영남권 접대에서 빛을 봅니다.",
       pros: [
         "동해 바다 조망이 뛰어나 동반자에게 인상이 좋습니다.",
         "리조트와 묶어 휴양을 겸한 자리로 구성하기 좋습니다.",
@@ -1226,7 +1226,7 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "bomun-gc": {
-    recommendedFor: "경주 보문관광단지에서 관광과 라운드를 묶고 싶은 분",
+    recommendedFor: "경주 보문관광단지에서 관광과 라운드를 함께 묶는 분",
     playTip: "완만한 공영 코스라 초·중급자도 편하게 라운드 리듬을 잡기 좋습니다.",
     business: {
       summary: "경주 보문관광단지 공영 코스라, 관광을 겸한 가벼운 접대에 부담이 없습니다.",
@@ -1288,10 +1288,10 @@ export const courseNotes: Record<string, CourseNote> = {
         p: "장흥유원지와 송추계곡 등 서울 북부 외곽이 가까워, 라운드 앞뒤로 들르기 좋습니다. 강북·일산권 거래처와 만나기에 특히 유리한 위치입니다.",
       },
     ],
-    recommendedFor: "서울 북부에서 전통 있는 명문 회원제를 찾는 분",
+    recommendedFor: "서울 북부에서 전통 있는 명문 회원제를 아끼는 분",
     playTip: "오래된 수림이 페어웨이를 좁히니 티샷 방향에 신경 쓰세요.",
     business: {
-      summary: "서울 북부의 전통 명문이라, 오래된 이름값으로 격을 세워야 하는 접대에 어울립니다.",
+      summary: "서울 북부의 전통 명문이라, 오래된 이름값으로 격을 세워야 하는 접대에 든든합니다.",
       pros: [
         "전통 명문이라 이름값이 있어 거래처에게 정성이 전달됩니다.",
         "서울 북부권이라 수도권 북부 동반자 접근성이 좋습니다.",
@@ -1319,7 +1319,7 @@ export const courseNotes: Record<string, CourseNote> = {
         p: "곤지암 일대는 리조트와 화담숲, 소머리국밥 같은 먹거리가 가까워 라운드 전후를 자연스럽게 이을 수 있습니다. 중부고속도로를 타면 수도권 남동부에서 접근도 무난합니다.",
       },
     ],
-    recommendedFor: "최상급 프라이빗 코스를 경험하고 싶은 분",
+    recommendedFor: "최상급 프라이빗 코스에 마음이 가는 분",
     playTip: "섬세하게 설계된 그린이라 어프로치 거리를 핀에 정확히 맞추는 것이 중요합니다.",
     business: {
       summary: "일반 예약으로는 닿기 어려운 최상급 프라이빗. 모신다는 것 자체가 메시지가 되는 자리입니다.",
@@ -1339,7 +1339,7 @@ export const courseNotes: Record<string, CourseNote> = {
     recommendedFor: "리조트와 묶어 가족 단위로 즐기려는 분",
     playTip: "산악 코스라 내리막에서 굴러가는 거리를 감안해 클럽을 줄여보세요.",
     business: {
-      summary: "리조트와 묶기 좋은 코스라, 라운드와 휴양을 겸한 자리에 어울립니다.",
+      summary: "리조트와 묶기 좋은 코스라, 라운드와 휴양을 함께 가져가는 자리에 제격입니다.",
       pros: [
         "리조트 시설과 연계돼 일정을 넓히기 좋습니다.",
         "수도권 남부라 서울·경기 동반자 접근성이 무난합니다.",
@@ -1446,10 +1446,10 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "sky-valley-cc": {
-    recommendedFor: "여주권에서 경관 좋은 대중제를 찾는 분",
+    recommendedFor: "여주권에서 경관 좋은 대중제를 즐기는 분",
     playTip: "산·호수를 낀 홀이 많아 워터해저드 앞에서는 안전한 레이업이 유리합니다.",
     business: {
-      summary: "여주권 경관 좋은 대중제라, 편하게 즐기는 수도권 동부 동반 라운드에 맞습니다.",
+      summary: "여주권 경관 좋은 대중제라, 편하게 즐기는 수도권 동부 동반 라운드로 무난합니다.",
       pros: [
         "산·호수 경관이 좋아 라운드 분위기가 시원합니다.",
         "대중제라 부킹과 비회원 동반이 자유롭습니다.",
@@ -1463,7 +1463,7 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "360-degree-cc": {
-    recommendedFor: "공략하는 재미가 큰 산악 코스를 원하는 분",
+    recommendedFor: "공략하는 재미가 큰 산악 코스를 좋아하는 분",
     playTip: "고저차가 분명해 같은 거리라도 클럽 선택을 한 번 더 점검하세요.",
     business: {
       summary: "공략 재미가 큰 산악 코스라, 골프 즐기는 동반자와의 자리에 어울립니다.",
@@ -1494,7 +1494,7 @@ export const courseNotes: Record<string, CourseNote> = {
         p: "센트럴파크와 트리플스트리트가 가까워 라운드 후 식사나 미팅으로 넘어가기 좋습니다. 인천대교와 공항이 가까워 공항 동선과도 잘 맞습니다.",
       },
     ],
-    recommendedFor: "세계 대회가 열린 해안 링크스를 동경하는 분",
+    recommendedFor: "세계 대회가 열린 해안 링크스에 마음이 가는 분",
     playTip: "바람이 스코어를 좌우하는 링크스라 낮은 탄도 샷을 준비하면 좋습니다.",
     business: {
       summary: "강한 인상을 남겨야 하는 비중 큰 접대라면, 세계 대회가 열린 이 해안 링크스가 힘을 발휘합니다.",
@@ -1562,10 +1562,10 @@ export const courseNotes: Record<string, CourseNote> = {
     },
   },
   "cheonryong-cc": {
-    recommendedFor: "한적하게 즐기는 산지형 회원제를 원하는 분",
+    recommendedFor: "한적하게 즐기는 산지형 회원제를 선호하는 분",
     playTip: "산세를 살린 코스라 경사 라이가 많아 어드레스 적응이 중요합니다.",
     business: {
-      summary: "한적한 산지형 회원제라, 조용하게 모시는 차분한 접대에 잘 맞습니다.",
+      summary: "한적한 산지형 회원제라, 조용하게 모시는 차분한 접대에 강합니다.",
       pros: [
         "한적한 회원제라 방해 없이 대화하는 접대가 가능합니다.",
         "산세를 살린 경관이 좋아 라운드 분위기가 차분합니다.",
