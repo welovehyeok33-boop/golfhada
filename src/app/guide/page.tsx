@@ -18,6 +18,9 @@ export const metadata: Metadata = {
 };
 
 export default function GuideIndexPage() {
+  const businessGuides = guides.filter((g) => g.category === "비즈니스·접대");
+  const basicGuides = guides.filter((g) => g.category !== "비즈니스·접대");
+
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -51,13 +54,35 @@ export default function GuideIndexPage() {
           </p>
         </header>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {guides.map((g) => (
-            <GuideCard key={g.slug} guide={g} />
-          ))}
-        </div>
+        <section className="mt-10">
+          <div className="border-l-4 border-green-600 pl-3">
+            <h2 className="text-lg font-bold text-green-900 sm:text-xl">비즈니스·접대 골프</h2>
+            <p className="mt-1 text-sm text-green-900/60">
+              거래처를 모시는 라운드를 직접 챙기며 정리한 노하우. 코스 선택부터 대화·비용·후속 관리까지.
+            </p>
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {businessGuides.map((g) => (
+              <GuideCard key={g.slug} guide={g} />
+            ))}
+          </div>
+        </section>
 
         <AdSlot className="my-10" />
+
+        <section className="mt-4">
+          <div className="border-l-4 border-green-200 pl-3">
+            <h2 className="text-lg font-bold text-green-900 sm:text-xl">입문·기초</h2>
+            <p className="mt-1 text-sm text-green-900/60">
+              골프를 처음 시작하는 분을 위한 기본기. 용어·비용·매너·장비부터 시즌 팁까지.
+            </p>
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {basicGuides.map((g) => (
+              <GuideCard key={g.slug} guide={g} />
+            ))}
+          </div>
+        </section>
       </div>
     </>
   );
