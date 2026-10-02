@@ -9,26 +9,29 @@ export default function DistanceConverter() {
   const [meter, setMeter] = useState((220 * YARD_TO_METER).toFixed(1));
 
   const onYard = (v: string) => {
-    const clean = v.replace(/[^0-9.]/g, "");
+    const clean = v;
     setYard(clean);
     const n = Number(clean);
-    setMeter(clean === "" || isNaN(n) ? "" : (n * YARD_TO_METER).toFixed(1));
+    setMeter(clean === "" || !Number.isFinite(n) || n < 0 ? "" : (n * YARD_TO_METER).toFixed(1));
   };
   const onMeter = (v: string) => {
-    const clean = v.replace(/[^0-9.]/g, "");
+    const clean = v;
     setMeter(clean);
     const n = Number(clean);
-    setYard(clean === "" || isNaN(n) ? "" : (n / YARD_TO_METER).toFixed(1));
+    setYard(clean === "" || !Number.isFinite(n) || n < 0 ? "" : (n / YARD_TO_METER).toFixed(1));
   };
 
   return (
     <div className="rounded-2xl border border-green-100 bg-cream p-5 shadow-sm sm:p-6">
       <div className="grid grid-cols-1 items-end gap-3 sm:grid-cols-[1fr_auto_1fr]">
         <div className="flex flex-col gap-1.5">
-          <label className="text-sm font-medium text-green-900">야드 (yd)</label>
+          <label htmlFor="distance-yard" className="text-sm font-medium text-green-900">야드 (yd)</label>
           <input
             type="number"
             inputMode="decimal"
+            id="distance-yard"
+            min={0}
+            step="any"
             value={yard}
             onChange={(e) => onYard(e.target.value)}
             className="rounded-lg border border-green-200 bg-green-50/40 px-3 py-2.5 text-right text-lg font-bold text-green-900 focus:border-green-400 focus:outline-none focus:ring-1 focus:ring-green-400"
@@ -36,10 +39,13 @@ export default function DistanceConverter() {
         </div>
         <div className="hidden pb-3 text-center text-green-900/40 sm:block">⇄</div>
         <div className="flex flex-col gap-1.5">
-          <label className="text-sm font-medium text-green-900">미터 (m)</label>
+          <label htmlFor="distance-meter" className="text-sm font-medium text-green-900">미터 (m)</label>
           <input
             type="number"
             inputMode="decimal"
+            id="distance-meter"
+            min={0}
+            step="any"
             value={meter}
             onChange={(e) => onMeter(e.target.value)}
             className="rounded-lg border border-green-200 bg-green-50/40 px-3 py-2.5 text-right text-lg font-bold text-green-900 focus:border-green-400 focus:outline-none focus:ring-1 focus:ring-green-400"

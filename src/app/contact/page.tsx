@@ -14,7 +14,7 @@ export default function ContactPage() {
       <h1 className="text-2xl font-bold text-green-900 sm:text-3xl">문의하기</h1>
       <p className="mt-6 text-green-900/80">
         골프장 정보 수정 요청, 신규 골프장 등록, 제휴·광고 등 어떤 문의든 환영합니다. 아래 양식을 작성하시거나
-        이메일로 직접 연락해 주세요. 확인 후 빠르게 회신드리겠습니다.
+        이메일로 직접 연락해 주세요. 정보 수정 요청에는 해당 페이지 주소와 확인 가능한 공식 자료를 함께 보내 주세요.
       </p>
 
       <div className="mt-4 rounded-lg bg-green-50 p-4 text-sm text-green-900/80">

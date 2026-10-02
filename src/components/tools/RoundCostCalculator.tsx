@@ -16,7 +16,7 @@ export default function RoundCostCalculator() {
   const perTeamShared = cart + caddie; // 팀이 나눠 내는 금액
   const perPersonShared = people > 0 ? Math.round(perTeamShared / people) : 0;
   const perPerson = greenFee + meal + perPersonShared;
-  const total = perPerson * people;
+  const total = (greenFee + meal) * people + perTeamShared;
 
   const rows = [
     { label: "그린피 (1인)", value: greenFee, set: setGreenFee, step: 10000, hint: "1인당 금액" },
@@ -27,10 +27,11 @@ export default function RoundCostCalculator() {
 
   return (
     <div className="rounded-2xl border border-green-100 bg-cream p-5 shadow-sm sm:p-6">
+      <p className="mb-5 text-sm text-green-900/70">입력된 금액은 계산 예시입니다. 예약 안내에서 확인한 실제 금액으로 바꿔 주세요.</p>
       <div className="space-y-4">
-        {rows.map((r) => (
+        {rows.map((r, i) => (
           <div key={r.label} className="flex flex-col gap-1.5">
-            <label className="flex items-center justify-between text-sm font-medium text-green-900">
+            <label htmlFor={`cost-${i}`} className="flex items-center justify-between text-sm font-medium text-green-900">
               <span>{r.label}</span>
               <span className="text-xs font-normal text-green-900/40">{r.hint}</span>
             </label>
@@ -45,12 +46,16 @@ export default function RoundCostCalculator() {
               </button>
               <div className="relative flex-1">
                 <input
+                  id={`cost-${i}`}
                   type="number"
                   inputMode="numeric"
                   min={0}
                   step={r.step}
                   value={r.value}
-                  onChange={(e) => r.set(Math.max(0, Number(e.target.value) || 0))}
+                  onChange={(e) => {
+                    const value = Number(e.target.value);
+                    r.set(Number.isFinite(value) ? Math.min(1000000000, Math.max(0, Math.round(value))) : 0);
+                  }}
                   className="w-full rounded-lg border border-green-200 bg-green-50/40 py-2 pl-3 pr-8 text-right font-semibold text-green-900 focus:border-green-400 focus:outline-none focus:ring-1 focus:ring-green-400"
                 />
                 <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-green-900/40">
@@ -78,6 +83,7 @@ export default function RoundCostCalculator() {
                 key={n}
                 type="button"
                 onClick={() => setPeople(n)}
+                aria-pressed={people === n}
                 className={`flex-1 rounded-lg border py-2 text-sm font-semibold transition ${
                   people === n
                     ? "border-green-600 bg-green-600 text-white"
@@ -94,7 +100,7 @@ export default function RoundCostCalculator() {
       {/* 결과 */}
       <div className="mt-6 rounded-xl bg-green-700 p-5 text-white">
         <div className="flex items-end justify-between">
-          <span className="text-sm text-green-100/90">1인당 예상 비용</span>
+          <span className="text-sm text-green-100/90">1인당 예상 비용 (원 단위 반올림)</span>
           <span className="text-2xl font-bold">{won(perPerson)}</span>
         </div>
         <div className="mt-2 flex items-center justify-between border-t border-white/15 pt-2 text-sm text-green-100/80">

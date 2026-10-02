@@ -35,7 +35,7 @@ export default function ContactForm() {
         <textarea id="message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} required className={`mt-1 ${inputClass}`} />
       </div>
       <button type="submit" className="rounded-full bg-green-600 px-6 py-2.5 text-sm font-medium text-white hover:bg-green-700">
-        메일 보내기
+        메일 작성창 열기
       </button>
     </form>
   );

@@ -54,20 +54,20 @@ export default function Home() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/30" />
-        <div className="relative mx-auto max-w-6xl px-4 py-24 text-center sm:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-950/90 via-green-950/55 to-black/20" />
+        <div className="relative mx-auto max-w-6xl px-6 py-24 text-left sm:py-36">
           <p className="text-sm font-semibold text-green-200">비즈니스·접대 골프장 가이드</p>
-          <h1 className="mt-3 text-3xl font-bold leading-tight text-white drop-shadow sm:text-5xl">
-            이번엔 어디로 모실까?
+          <h1 className="mt-3 break-keep text-3xl font-bold leading-tight text-white drop-shadow sm:text-6xl">
+            함께하는 라운드,<br />준비부터 다르게.
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/85 drop-shadow">
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 drop-shadow">
             거래처를 모시는 라운드는 코스 평점만으로 고를 수 없습니다. 접대하기 좋은지, 격식과 접근성은 어떤지 —
             전국 골프장을 비즈니스 라운드의 시선으로 정리했습니다.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/region/gyeonggi"
-              className="rounded-full bg-green-600 px-6 py-2.5 text-sm font-medium text-white hover:bg-green-700"
+              className="rounded-full bg-amber-200 px-6 py-2.5 text-sm font-medium text-green-950 hover:bg-amber-100"
             >
               수도권 골프장 보기
             </Link>
@@ -75,7 +75,7 @@ export default function Home() {
               href="/about"
               className="rounded-full border border-white/70 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-sm hover:bg-white/20"
             >
-              운영자 소개
+              사이트 소개와 편집 기준
             </Link>
           </div>
 
@@ -102,6 +102,9 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-6xl px-4">
+        <section className="mt-10 grid gap-4 md:grid-cols-3" aria-label="라운드 준비 순서">
+          {[{n:"01",title:"동선을 정하고",text:"동반자의 출발지와 티오프 시간을 함께 고려하세요.",href:"/region/gyeonggi"},{n:"02",title:"조건을 확인하고",text:"초대·비용 부담·취소 조건을 예약 전에 합의하세요.",href:"/guide/business-golf-anti-graft-law"},{n:"03",title:"예산을 나눕니다",text:"1인 비용과 팀 공통 비용을 구분해 계산하세요.",href:"/tools/round-cost"}].map(item=><Link key={item.n} href={item.href} className="group rounded-2xl border border-green-200 bg-cream p-6 transition hover:-translate-y-1 hover:shadow-lg"><span className="text-sm font-bold text-green-600">{item.n} / ROUND PLANNER</span><h2 className="mt-4 text-xl font-bold text-green-900">{item.title} <span className="float-right">↗</span></h2><p className="mt-2 text-sm leading-relaxed text-green-900/70">{item.text}</p></Link>)}
+        </section>
         {/* 지역 그리드 */}
         <section className="py-12">
           <h2 className="text-xl font-bold text-green-900">지역별 골프장</h2>
@@ -119,10 +122,9 @@ export default function Home() {
 
         {/* 추천 골프장 */}
         <section className="py-12">
-          <h2 className="text-xl font-bold text-green-900">접대하기 좋은 추천 코스</h2>
+          <h2 className="text-xl font-bold text-green-900">비교해 볼 골프장</h2>
           <p className="mt-1 text-sm text-green-900/60">
-            운영자 {siteConfig.author.name}가 비즈니스 라운드 시선으로 골랐습니다. 상세 페이지에 코스별 접대 장단점을
-            정리해 뒀어요.
+            지역과 이동 동선부터 살펴보고, 코스별 준비 메모에서 예약 전에 확인할 질문을 찾아보세요.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {featured.map((c) => (
@@ -156,7 +158,7 @@ export default function Home() {
           <div className="flex items-end justify-between">
             <div>
               <h2 className="text-xl font-bold text-green-900">골프 계산기</h2>
-              <p className="mt-1 text-sm text-green-900/60">라운드 비용·핸디캡·비거리를 바로 계산해 보세요.</p>
+              <p className="mt-1 text-sm text-green-900/60">라운드 비용·평균 스코어·비거리를 바로 계산해 보세요.</p>
             </div>
             <Link href="/tools" className="shrink-0 text-sm font-medium text-green-600 hover:text-green-700">
               전체 보기 →
@@ -204,8 +206,8 @@ export default function Home() {
             <article className="rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
               <h3 className="font-bold text-white">회원제·대중제 구분은 부킹 전략</h3>
               <p className="mt-2 text-sm text-green-50/90">
-                격식이 필요하면 회원제, 비회원 동반과 일정 유연성이 필요하면 대중제가 유리합니다. 자리의 성격에
-                맞춰 코스 유형부터 정하면 실패가 줄어듭니다.
+                코스마다 비회원 예약과 동반 조건이 다릅니다. 회원제·대중제라는 구분만으로 판단하지 말고 일정에
+                맞는 예약 자격, 취소 기한과 총비용을 공식 안내에서 확인하세요.
               </p>
             </article>
           </div>

@@ -6,7 +6,7 @@ import { siteConfig } from "@/config";
  */
 export default function AdSlot({ slot, className }: { slot?: string; className?: string }) {
   // 애드센스 client ID가 설정되기 전(승인 전)에는 아무것도 표시하지 않습니다.
-  if (!siteConfig.adsenseClient) {
+  if (!siteConfig.adsenseClient || !slot) {
     return null;
   }
 

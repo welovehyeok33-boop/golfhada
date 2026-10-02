@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
 
       <h2 className="mt-10 text-xl font-bold text-green-900">1. 수집하는 정보</h2>
       <p className="mt-4 text-green-900/80">
-        본 사이트는 회원가입 절차가 없으며 이름, 연락처 등 직접적인 개인정보를 수집하지 않습니다. 다만 서비스
+        일반 방문자의 회원가입은 제공하지 않습니다. 이메일 문의 시 발신 주소와 본인이 작성한 문의 내용이 문의 응대를 위해 처리됩니다. 서비스
         개선과 통계 분석을 위해 다음의 정보가 자동으로 수집될 수 있습니다.
       </p>
       <ul className="mt-4 list-disc space-y-2 pl-5 text-green-900/80">
@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
       <h2 className="mt-10 text-xl font-bold text-green-900">3. 분석 도구</h2>
       <p className="mt-4 text-green-900/80">
         본 사이트는 서비스 개선을 위해 향후 Google Analytics와 같은 방문자 통계 분석 도구를 도입할 수 있습니다.
-        이러한 도구를 통해 수집되는 정보는 익명으로 처리되며 개인을 식별하는 데 사용되지 않습니다.
+        분석 서비스가 적용되는 경우 해당 제공업체의 개인정보 정책과 설정에 따라 접속 정보가 처리될 수 있습니다. 계산 도구 입력값은 브라우저에서 처리되며 계산 기능은 이를 서버에 제출하거나 저장하지 않습니다.
       </p>
 
       <h2 className="mt-10 text-xl font-bold text-green-900">4. 개인정보의 제3자 제공</h2>

@@ -63,17 +63,16 @@ export default function RoundCostPage() {
         <div>
           <h3 className="font-bold text-green-800">카트비</h3>
           <p className="mt-2">
-            대부분의 국내 골프장은 카트 이용이 사실상 필수이며, 팀당 8만~10만 원 수준입니다. 4명이 함께 타면
-            1인당 부담이 절반 이하로 줄지만, 2명이 치면 그만큼 1인당 비용이 올라갑니다.
+            카트 이용 방식과 부과 단위는 골프장 안내를 확인해야 합니다. 팀당 같은 금액을 나눈다는 조건에서
+            4명의 1인 부담액은 2명일 때의 절반입니다. 2인 플레이 추가 요금이나 필수 인원 조건이 있으면 별도로 반영하세요.
           </p>
         </div>
 
         <div>
           <h3 className="font-bold text-green-800">캐디피</h3>
           <p className="mt-2">
-            캐디 동반이 의무인 코스에서는 팀당 15만 원 안팎의 캐디피가 추가됩니다. 최근에는 캐디 선택제나
-            노캐디(셀프) 라운드를 운영하는 대중제 코스도 늘고 있어, 비용을 아끼려면 예약 단계에서 캐디 운영
-            방식을 확인하는 것이 좋습니다.
+            캐디 동반 여부, 팀 요금과 지급 방법은 코스별로 확인하세요. 셀프 라운드가 가능한지,
+            캐디 선택에 따라 예약 조건이 달라지는지도 함께 확인해야 합니다. 계산기에는 안내받은 팀 전체 금액을 입력합니다.
           </p>
         </div>
 
@@ -103,7 +102,7 @@ export default function RoundCostPage() {
             골프 가이드
           </Link>
           <Link href="/tools/handicap" className="rounded-full bg-green-50 px-3 py-1.5 text-green-700 hover:bg-green-100">
-            핸디캡 계산기
+            스코어 평균 계산기
           </Link>
           <Link href="/" className="rounded-full bg-green-50 px-3 py-1.5 text-green-700 hover:bg-green-100">
             지역별 골프장 찾기
@@ -112,7 +111,7 @@ export default function RoundCostPage() {
       </div>
 
       <p className="mt-6 text-xs leading-relaxed text-green-900/50">
-        ※ 입력 기본값은 일반적인 평균을 참고한 예시이며, 실제 금액은 골프장·시즌·시간대에 따라 다릅니다.
+        ※ 입력 기본값은 계산 방법을 보여주는 임의의 예시이며, 실제 금액은 골프장·시즌·시간대에 따라 다릅니다.
         예약 전 각 골프장 공식 채널에서 최신 요금을 확인하세요.
       </p>
     </div>

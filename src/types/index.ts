@@ -1,4 +1,4 @@
-export type CourseType = "회원제" | "대중제" | "비회원제" | "퍼블릭" | "군/공공";
+export type CourseType = "회원제" | "대중제" | "비회원제" | "퍼블릭" | "군/공공" | "코스별 상이" | "공식 안내 확인";
 
 export interface Region {
   slug: string;
@@ -8,6 +8,7 @@ export interface Region {
 }
 
 export type GuideBlock =
+  | { type: "source"; label: string; url: string }
   | { type: "p"; text: string }
   | { type: "h2"; text: string }
   | { type: "ul"; items: string[] }

@@ -14,15 +14,15 @@ export const tools: GolfTool[] = [
   },
   {
     slug: "handicap",
-    name: "핸디캡 계산기",
-    tagline: "내 실력은 어느 정도?",
-    description: "최근 라운드 스코어를 넣으면 평균 오버파 기반의 간이 핸디캡과 실력 단계를 알려줍니다.",
+    name: "스코어 평균 계산기",
+    tagline: "기록을 한눈에",
+    description: "최근 스코어의 평균·최저 타수·평균 오버파를 계산합니다. 공식 핸디캡과 구분해서 기록을 살펴보세요.",
   },
   {
     slug: "distance",
     name: "비거리 환산기",
     tagline: "야드 ↔ 미터",
-    description: "야드와 미터를 즉시 변환하고, 클럽별 평균 비거리표로 내 거리를 가늠해 봅니다.",
+    description: "야드와 미터를 변환합니다. 캐리와 총거리를 구분해 기록과 코스 표지판을 비교하세요.",
   },
 ];
 

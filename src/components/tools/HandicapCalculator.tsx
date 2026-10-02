@@ -6,25 +6,14 @@ export default function HandicapCalculator() {
   const [par, setPar] = useState(72);
   const [scores, setScores] = useState<string[]>(["", "", ""]);
 
-  const nums = scores.map((s) => Number(s)).filter((n) => n > 0);
+  const nums = scores.map((s) => Number(s)).filter((n) => Number.isFinite(n) && Number.isInteger(n) && n > 0 && n <= 300);
   const count = nums.length;
   const avg = count ? nums.reduce((a, b) => a + b, 0) / count : 0;
   const best = count ? Math.min(...nums) : 0;
   const avgOverPar = count ? avg - par : 0;
-  // 간이 핸디캡: 최근 라운드 평균 오버파 (정식 WHS 핸디캡과 다름)
-  const simpleHandicap = count ? Math.max(0, Math.round(avgOverPar)) : 0;
-
-  const tierLabel = (over: number) => {
-    if (over <= 0) return "이븐파 이상 — 싱글 상위권";
-    if (over <= 9) return "싱글 핸디캐퍼";
-    if (over <= 18) return "보기 플레이어";
-    if (over <= 27) return "더블보기 플레이어";
-    return "입문·초급 단계";
-  };
-
   const setScore = (i: number, v: string) => {
     const next = [...scores];
-    next[i] = v.replace(/[^0-9]/g, "");
+    next[i] = v;
     setScores(next);
   };
   const addRow = () => setScores([...scores, ""]);
@@ -41,6 +30,7 @@ export default function HandicapCalculator() {
               key={p}
               type="button"
               onClick={() => setPar(p)}
+              aria-pressed={par === p}
               className={`rounded-lg border px-4 py-1.5 text-sm font-semibold transition ${
                 par === p
                   ? "border-green-600 bg-green-600 text-white"
@@ -62,7 +52,9 @@ export default function HandicapCalculator() {
             <input
               type="number"
               inputMode="numeric"
-              min={0}
+              min={1}
+              max={300}
+              aria-label={`${i + 1}라운드 스코어`}
               placeholder="예: 92"
               value={s}
               onChange={(e) => setScore(i, e.target.value)}
@@ -96,10 +88,9 @@ export default function HandicapCalculator() {
         ) : (
           <>
             <div className="flex items-end justify-between">
-              <span className="text-sm text-green-100/90">간이 핸디캡 (평균 오버파)</span>
-              <span className="text-2xl font-bold">{simpleHandicap}</span>
+              <span className="text-sm text-green-100/90">평균 오버파</span>
+              <span className="text-2xl font-bold">{avgOverPar > 0 ? "+" : ""}{avgOverPar.toFixed(1)}</span>
             </div>
-            <p className="mt-1 text-sm font-medium text-green-100">{tierLabel(avgOverPar)}</p>
             <div className="mt-3 grid grid-cols-3 gap-2 border-t border-white/15 pt-3 text-center text-sm">
               <div>
                 <p className="text-green-100/70">평균</p>
@@ -118,8 +109,7 @@ export default function HandicapCalculator() {
         )}
       </div>
       <p className="mt-3 text-xs leading-relaxed text-green-900/50">
-        ※ 여기서 계산하는 값은 평균 오버파 기반의 &lsquo;간이 핸디캡&rsquo;입니다. 정식 핸디캡(WHS)은 코스 레이팅과
-        슬로프 레이팅을 반영해 산출되므로 실제 핸디캡과는 차이가 있을 수 있습니다.
+        같은 파의 라운드 기록만 입력하세요. 이 결과는 스코어의 산술 평균이며 공식 WHS 핸디캡이 아닙니다. 1~300 사이의 정수만 계산에 포함합니다.
       </p>
     </div>
   );

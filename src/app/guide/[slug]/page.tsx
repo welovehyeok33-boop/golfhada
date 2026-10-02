@@ -35,6 +35,8 @@ export async function generateMetadata({
 
 function Block({ block }: { block: GuideBlock }) {
   switch (block.type) {
+    case "source":
+      return <p className="mt-4 text-sm"><a href={block.url} className="text-green-700 underline" target="_blank" rel="noopener noreferrer">{block.label} ↗</a></p>;
     case "h2":
       return <h2 className="mt-10 text-xl font-bold text-green-900">{block.text}</h2>;
     case "p":
@@ -91,7 +93,7 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
   const guide = getGuide(slug);
   if (!guide) notFound();
 
-  const related = guides.filter((g) => g.slug !== slug).slice(0, 3);
+  const related = [...guides.filter((g) => g.slug !== slug && g.category === guide.category), ...guides.filter((g) => g.category !== guide.category)].slice(0, 3);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -101,7 +103,7 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
     datePublished: guide.publishedAt,
     dateModified: guide.updatedAt ?? guide.publishedAt,
     author: {
-      "@type": "Person",
+      "@type": "Organization",
       name: siteConfig.author.name,
       description: siteConfig.author.short,
       url: `${siteConfig.url}/about`,

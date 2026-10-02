@@ -22,7 +22,7 @@ export async function generateMetadata({
 
   const region = getRegion(course.regionSlug);
   const note = getCourseNote(slug);
-  const title = `${course.name} - 그린피·코스 정보`;
+  const title = `${course.name} - 코스 정보·예약 전 확인사항`;
   const description = `${region?.name} ${course.city} ${course.name} 정보. ${course.description.slice(0, 100)}`;
 
   // 깊이 있는 리뷰(deepDive)가 있는 주력 코스만 색인합니다.
@@ -39,7 +39,7 @@ export async function generateMetadata({
 }
 
 function feeText(v?: number) {
-  return v ? `${v.toLocaleString()}원~` : "문의";
+  return v ? `${v.toLocaleString()}원~` : "공식 예약에서 확인";
 }
 
 export default async function CoursePage({
@@ -143,6 +143,7 @@ export default async function CoursePage({
           </div>
         </dl>
 
+        <section className="mt-6 rounded-xl border border-green-200 bg-green-50 p-5 text-sm leading-relaxed text-green-900/80"><h2 className="font-bold">예약 전 자료 확인</h2><p className="mt-2">아래 준비 메모는 직접 방문 후기가 아닙니다. 현재 코스 상태·요금·예약 가능 여부는 공식 안내에서 확인하세요. 운영 형태만으로 서비스 수준이나 예약 난도를 판단하지 마세요.</p>{course.website && <a href={course.website} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block font-semibold text-green-600 underline">{course.name} 공식 안내 열기 ↗</a>}</section>
         {/* 본문 */}
         <section className="prose-kr mt-8">
           <h2 className="text-xl font-bold text-green-900">코스 소개</h2>
@@ -168,22 +169,22 @@ export default async function CoursePage({
               <span className="rounded-full bg-green-600 px-2.5 py-1 text-xs font-semibold text-white">
                 에디터 노트
               </span>
-              <span className="text-xs text-green-900/50">골프하다가 직접 정리한 한 줄 메모</span>
+              <span className="text-xs text-green-900/50">방문 후기와 구분되는 편집 참고 정보</span>
             </div>
             <dl className="mt-4 space-y-4">
               <div>
-                <dt className="text-sm font-bold text-green-800">이런 분께 추천</dt>
+                <dt className="text-sm font-bold text-green-800">비교할 때 참고할 점</dt>
                 <dd className="mt-1 text-green-900/80">{note.recommendedFor}</dd>
               </div>
               <div>
-                <dt className="text-sm font-bold text-green-800">코스 공략 한 줄</dt>
+                <dt className="text-sm font-bold text-green-800">라운드 준비 메모</dt>
                 <dd className="mt-1 text-green-900/80">{note.playTip}</dd>
               </div>
             </dl>
           </section>
         )}
 
-        {/* 비즈니스·접대 관점 (준pro의 시선) */}
+        {/* 비즈니스·접대 관점 (편집 비교 기준) */}
         {note?.business && (
           <section className="mt-8 rounded-2xl border border-green-200 bg-cream p-5 sm:p-6">
             <div className="flex items-center gap-2">
@@ -218,7 +219,7 @@ export default async function CoursePage({
               </div>
             </div>
             <p className="mt-4 text-xs text-green-900/50">
-              운영자 {siteConfig.author.name}가 비즈니스 라운드 경험을 토대로 정리한 의견이며, 실제 분위기는
+              공개 자료를 바탕으로 정리한 편집 의견으로 직접 방문 후기가 아닙니다. 실제 분위기는
               시즌·동반자·티타임에 따라 다를 수 있습니다.
             </p>
           </section>

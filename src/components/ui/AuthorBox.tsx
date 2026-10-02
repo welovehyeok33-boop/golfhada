@@ -12,10 +12,10 @@ export default function AuthorBox({ className }: { className?: string }) {
           className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-600 text-lg font-bold text-white"
           aria-hidden
         >
-          준
+          골
         </div>
         <div>
-          <p className="text-xs font-semibold text-green-600">이 글을 쓴 사람</p>
+          <p className="text-xs font-semibold text-green-600">콘텐츠 안내</p>
           <p className="mt-0.5 font-bold text-green-900">{author.name}</p>
           <p className="text-xs text-green-900/60">{author.role}</p>
           <p className="mt-2 text-sm leading-relaxed text-green-900/80">{author.bio}</p>
@@ -23,7 +23,7 @@ export default function AuthorBox({ className }: { className?: string }) {
             href="/about"
             className="mt-3 inline-block text-sm font-medium text-green-600 hover:text-green-700"
           >
-            운영자·사이트 소개 보기 →
+            사이트 소개와 편집 기준 보기 →
           </Link>
         </div>
       </div>

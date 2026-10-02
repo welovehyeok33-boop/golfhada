@@ -29,7 +29,7 @@ export default function CourseCard({ course }: { course: GolfCourse }) {
 
         {note ? (
           <div className="mt-3 flex-1 rounded-lg bg-green-50/70 px-3 py-2.5">
-            <p className="text-xs font-semibold text-green-700">이런 분께 추천</p>
+            <p className="text-xs font-semibold text-green-700">비교할 때 참고할 점</p>
             <p className="mt-0.5 line-clamp-2 text-sm leading-relaxed text-green-900/80">
               {note.recommendedFor}
             </p>
