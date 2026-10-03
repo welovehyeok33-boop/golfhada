@@ -8,6 +8,7 @@ export interface Region {
 }
 
 export type GuideBlock =
+  | { type: "checklist"; items: string[] }
   | { type: "source"; label: string; url: string }
   | { type: "p"; text: string }
   | { type: "h2"; text: string }

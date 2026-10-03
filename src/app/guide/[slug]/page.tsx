@@ -6,6 +6,7 @@ import { guides, getGuide } from "@/data/guides";
 import type { GuideBlock } from "@/types";
 import GuideCard from "@/components/ui/GuideCard";
 import AuthorBox from "@/components/ui/AuthorBox";
+import PreparationChecklist from "@/components/ui/PreparationChecklist";
 import { siteConfig } from "@/config";
 
 export function generateStaticParams() {
@@ -29,16 +30,19 @@ export async function generateMetadata({
       description: guide.excerpt,
       url: `${siteConfig.url}/guide/${slug}`,
       publishedTime: guide.publishedAt,
+      modifiedTime: guide.updatedAt ?? guide.publishedAt,
     },
   };
 }
 
-function Block({ block }: { block: GuideBlock }) {
+function Block({ block, index }: { block: GuideBlock; index: number }) {
   switch (block.type) {
     case "source":
       return <p className="mt-4 text-sm"><a href={block.url} className="text-green-700 underline" target="_blank" rel="noopener noreferrer">{block.label} ↗</a></p>;
     case "h2":
-      return <h2 className="mt-10 text-xl font-bold text-green-900">{block.text}</h2>;
+      return <h2 id={`section-${index}`} className="mt-10 scroll-mt-28 break-keep text-xl font-bold text-green-900">{block.text}</h2>;
+    case "checklist":
+      return <PreparationChecklist items={block.items} />;
     case "p":
       return <p className="mt-4 text-green-900/80">{block.text}</p>;
     case "ul":
@@ -140,7 +144,7 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
           <span className="rounded-full bg-green-50 px-2.5 py-1 text-xs font-medium text-green-600">
             {guide.category}
           </span>
-          <h1 className="mt-3 text-2xl font-bold leading-tight text-green-900 sm:text-3xl">
+          <h1 className="mt-3 break-keep text-2xl font-bold leading-tight text-green-900 sm:text-3xl">
             {guide.title}
           </h1>
           <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-green-900/50">
@@ -165,9 +169,18 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
           </div>
         )}
 
+        <nav aria-label="글 목차" className="mt-7 rounded-xl border border-green-200 bg-cream p-5">
+          <details>
+            <summary className="cursor-pointer font-semibold text-green-900">이 글에서 필요한 내용 찾기</summary>
+            <ol className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+              {guide.body.map((block, index) => block.type === "h2" && <li key={index}><a href={`#section-${index}`} className="block rounded-lg px-2 py-1.5 text-green-700 underline decoration-green-200 underline-offset-4 hover:bg-green-50">{block.text}</a></li>)}
+            </ol>
+          </details>
+        </nav>
+
         <div className="prose-kr mt-6">
           {guide.body.map((block, i) => (
-            <Block key={i} block={block} />
+            <Block key={i} block={block} index={i} />
           ))}
         </div>
 
@@ -175,8 +188,8 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
         <section className="mt-10 rounded-xl border border-green-100 bg-green-50 p-6">
           <h2 className="text-lg font-bold text-green-900">이제 라운드 갈 골프장을 찾아볼까요?</h2>
           <p className="mt-2 text-sm text-green-900/70">
-            지역별로 그린피와 코스 정보를 비교해 보세요. 코스마다 접대·비즈니스 라운드 관점의 장단점을 함께
-            정리해 두어, 거래처를 모실 곳도 빠르게 고를 수 있습니다.
+            동반자의 출발지에 맞는 지역부터 살펴보세요. 골프장 페이지의 준비 메모와 공식 안내를 함께 확인하면
+            예약할 코스와 동반자에게 물어볼 조건을 정리하기 쉽습니다.
           </p>
           <Link
             href="/"

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { GuideArticle } from "@/types";
 
-export default function GuideCard({ guide }: { guide: GuideArticle }) {
+export default function GuideCard({ guide }: { guide: Pick<GuideArticle, "slug" | "title" | "excerpt" | "category" | "readingMinutes" | "coverImage" | "coverAlt"> }) {
   return (
     <Link
       href={`/guide/${guide.slug}`}

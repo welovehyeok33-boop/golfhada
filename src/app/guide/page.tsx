@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { guides } from "@/data/guides";
-import GuideCard from "@/components/ui/GuideCard";
-import AdSlot from "@/components/ui/AdSlot";
+import GuideExplorer from "@/components/ui/GuideExplorer";
 import { siteConfig } from "@/config";
 
 export const metadata: Metadata = {
@@ -18,8 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function GuideIndexPage() {
-  const businessGuides = guides.filter((g) => g.category === "비즈니스·접대");
-  const basicGuides = guides.filter((g) => g.category !== "비즈니스·접대");
+  const summaries = guides.map(({ slug, title, excerpt, category, readingMinutes, coverImage, coverAlt }) => ({ slug, title, excerpt, category, readingMinutes, coverImage, coverAlt }));
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
@@ -54,35 +52,10 @@ export default function GuideIndexPage() {
           </p>
         </header>
 
-        <section className="mt-10">
-          <div className="border-l-4 border-green-600 pl-3">
-            <h2 className="text-lg font-bold text-green-900 sm:text-xl">비즈니스·접대 골프</h2>
-            <p className="mt-1 text-sm text-green-900/60">
-              거래처를 모시는 라운드를 직접 챙기며 정리한 노하우. 코스 선택부터 대화·비용·후속 관리까지.
-            </p>
-          </div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {businessGuides.map((g) => (
-              <GuideCard key={g.slug} guide={g} />
-            ))}
-          </div>
-        </section>
-
-        <AdSlot className="my-10" />
-
-        <section className="mt-4">
-          <div className="border-l-4 border-green-200 pl-3">
-            <h2 className="text-lg font-bold text-green-900 sm:text-xl">입문·기초</h2>
-            <p className="mt-1 text-sm text-green-900/60">
-              골프를 처음 시작하는 분을 위한 기본기. 용어·비용·매너·장비부터 시즌 팁까지.
-            </p>
-          </div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {basicGuides.map((g) => (
-              <GuideCard key={g.slug} guide={g} />
-            ))}
-          </div>
-        </section>
+        <div className="mt-6 grid gap-3 sm:grid-cols-3" aria-label="처음 읽을 가이드">
+          {[{ href: "/guide/golf-round-day-flow", title: "첫 필드가 예정돼 있다면", text: "도착부터 정산까지 흐름 잡기" }, { href: "/guide/golf-booking-tips", title: "이번 주 예약을 맡았다면", text: "인원·티타임·취소 조건 확인" }, { href: "/guide/business-golf-cost-settlement", title: "비용을 나눠야 한다면", text: "개인 비용과 팀 비용 구분" }].map((item) => <Link key={item.href} href={item.href} className="rounded-xl border border-green-200 bg-cream p-5 hover:border-green-400"><h2 className="font-bold text-green-900">{item.title} ↗</h2><p className="mt-2 text-sm text-green-900/65">{item.text}</p></Link>)}
+        </div>
+        <GuideExplorer guides={summaries} />
       </div>
     </>
   );
