@@ -10,8 +10,10 @@ export default function GuideExplorer({ guides }: { guides: GuideSummary[] }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("전체");
   const categories = ["전체", ...new Set(guides.map((guide) => guide.category))];
-  const term = query.trim().toLowerCase();
-  const filtered = guides.filter((guide) => (category === "전체" || guide.category === category) && `${guide.title} ${guide.excerpt}`.toLowerCase().includes(term));
+  const term = query.trim();
+  const normalize = (value: string) => value.normalize("NFKC").toLowerCase().replace(/\s+/g, "");
+  const terms = term.split(/\s+/).filter(Boolean).map(normalize);
+  const filtered = guides.filter((guide) => (category === "전체" || guide.category === category) && terms.every((word) => normalize(`${guide.title} ${guide.excerpt}`).includes(word)));
 
   return (
     <section className="mt-8" aria-label="가이드 검색">

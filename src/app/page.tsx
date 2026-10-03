@@ -20,11 +20,7 @@ export default function Home() {
     region: getRegion(c.regionSlug)?.name ?? "",
     city: c.city,
   }));
-  const businessGuides = guides.filter((g) => g.category === "비즈니스·접대");
-  const featuredGuides = [
-    ...businessGuides,
-    ...guides.filter((g) => g.category !== "비즈니스·접대"),
-  ].slice(0, 3);
+  const featuredGuides = guides.slice(0, 6);
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
@@ -61,8 +57,8 @@ export default function Home() {
             함께하는 라운드,<br />준비부터 다르게.
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 drop-shadow">
-            거래처를 모시는 라운드는 코스 평점만으로 고를 수 없습니다. 접대하기 좋은지, 격식과 접근성은 어떤지 —
-            전국 골프장을 비즈니스 라운드의 시선으로 정리했습니다.
+            골프장 비교부터 연습 기록, 일정과 비용 정리까지.
+            예약 조건과 동반자에게 필요한 준비를 함께 확인하세요.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
@@ -137,9 +133,9 @@ export default function Home() {
         <section className="py-12">
           <div className="flex items-end justify-between">
             <div>
-              <h2 className="text-xl font-bold text-green-900">비즈니스·접대 골프 가이드</h2>
+              <h2 className="text-xl font-bold text-green-900">새로 읽는 골프 준비 노트</h2>
               <p className="mt-1 text-sm text-green-900/60">
-                거래처를 모실 때 알아두면 좋은 노하우. 입문 기초 가이드도 함께 정리했습니다.
+                레슨 상담부터 연습·장비·예약 인수인계까지, 다음 일정에 써볼 수 있는 안내입니다.
               </p>
             </div>
             <Link href="/guide" className="shrink-0 text-sm font-medium text-green-600 hover:text-green-700">
@@ -190,17 +186,17 @@ export default function Home() {
           <p className="mt-1 text-sm text-green-100/80">코스 실력보다 중요한 건, 모시는 사람이 편한가입니다.</p>
           <div className="prose-kr mt-6 grid gap-6 md:grid-cols-3">
             <article className="rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
-              <h3 className="font-bold text-white">코스보다 격식과 접근성</h3>
+              <h3 className="font-bold text-white">출발지와 이동 조건부터</h3>
               <p className="mt-2 text-sm text-green-50/90">
-                중요한 거래처일수록 화려한 코스보다 클럽하우스 격식, 식사 수준, 회사에서의 거리를 먼저 봅니다.
-                모시는 분이 부담 없이 도착할 수 있는지가 첫 기준입니다.
+                동반자의 출발지, 도착 가능한 시간과 식사 계획을 먼저 물어보세요.
+                골프장에 대한 평판보다 이번 모임에서 실제로 필요한 조건을 비교합니다.
               </p>
             </article>
             <article className="rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
               <h3 className="font-bold text-white">동반자 구력에 코스를 맞추세요</h3>
               <p className="mt-2 text-sm text-green-50/90">
-                페어웨이가 좁고 난도 높은 코스는 구력이 짧은 동반자를 지치게 합니다. 접대 자리라면 무리 없이
-                즐길 수 있는 평탄하고 넉넉한 코스가 분위기를 살립니다.
+                동반자의 경험과 원하는 플레이 범위를 확인하고 사용할 티와 이동 조건을 함께 살펴보세요.
+                사진이나 코스 이름만으로 난도를 판단하지 말고 공식 코스 안내를 대조합니다.
               </p>
             </article>
             <article className="rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
