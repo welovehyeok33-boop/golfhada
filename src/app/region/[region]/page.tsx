@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { regionPlanning } from "@/data/regionPlanning";
 import { regions, getRegion } from "@/data/regions";
 import { getCoursesByRegion, countByRegion } from "@/data/courses";
 import CourseCard from "@/components/ui/CourseCard";
@@ -20,7 +21,7 @@ export async function generateMetadata({
 
   const count = getCoursesByRegion(slug).length;
   const title = `${region.name} 골프장 정보 (${count}곳)`;
-  const description = `${region.name} 지역 골프장 ${count}곳의 그린피와 코스 정보, 비즈니스·접대 라운드 관점의 장단점을 정리했습니다. ${region.description}`;
+  const description = `${region.name} 지역 골프장 ${count}곳의 예약 확인 사항과 이동 준비 정보을 정리했습니다. ${region.description}`;
 
   // 노출할 주력 코스가 없는 지역은 (승인 전) 빈 페이지이므로 색인에서 제외합니다.
   const noindex = count === 0;
@@ -79,7 +80,7 @@ export default async function RegionPage({
             {region.description}
           </p>
           <p className="mt-2 text-sm font-medium text-green-600">
-            총 {list.length}개 골프장
+            현재 정리한 {list.length}개 골프장
           </p>
         </header>
 
@@ -93,6 +94,14 @@ export default async function RegionPage({
           <p className="mt-8 rounded-xl border border-dashed border-green-200 bg-green-50/50 p-10 text-center text-green-900/50">
             등록된 골프장 정보를 준비 중입니다.
           </p>
+        )}
+
+        {list.length > 0 && regionPlanning[slug] && (
+          <section className="mt-8 rounded-2xl border border-green-200 bg-green-50/60 p-6">
+            <h2 className="text-lg font-bold text-green-900">{region.name} 라운드 일정 준비</h2>
+            <p className="mt-3 max-w-3xl leading-8 text-green-900/80">{regionPlanning[slug][1]}</p>
+            <Link href="/guide/golf-booking-tips" className="mt-4 inline-block font-medium text-green-700 underline underline-offset-4">예약 전에 확인할 항목 보기 →</Link>
+          </section>
         )}
 
         <AdSlot className="my-10" />
