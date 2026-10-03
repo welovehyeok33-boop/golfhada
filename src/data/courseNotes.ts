@@ -56,7 +56,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "포천 예약과 다른 지점 구분부터 확인하세요."
+    "playTip": "포천 지점인지 확인한 뒤 예약한 코스명까지 동반자에게 공유하세요."
   },
   "namseoul-cc": {
     "deepDive": [
@@ -74,7 +74,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "경기 관람 경험과 직접 플레이 구분부터 확인하세요."
+    "playTip": "대회 관람 동선과 일반 라운드의 입장 절차를 구분하세요."
   },
   "sky72-ocean": {
     "recommendedFor": "영종도에서 오션코스의 예약 조건과 이동 동선을 확인하려는 모임",
@@ -110,7 +110,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "코스 이름을 정확히 공유하기부터 확인하세요."
+    "playTip": "브랜드 이름만 보내지 말고 청라 지점의 주소와 코스명을 함께 보내세요."
   },
   "phoenix-cc": {
     "recommendedFor": "평창에서 골프 일정과 숙박을 함께 비교하려는 모임",
@@ -146,7 +146,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "골프 예약과 리조트 예약 연결부터 확인하세요."
+    "playTip": "숙박과 골프 예약 번호를 각각 보관하고 포함 혜택을 대조하세요."
   },
   "woojung-hills-cc": {
     "deepDive": [
@@ -164,7 +164,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "대회 코스라는 이름보다 이용 조건부터 확인하세요."
+    "playTip": "대회 개최 이력과 별개로 방문일의 예약 자격부터 확인하세요."
   },
   "golden-bay-cc": {
     "recommendedFor": "서해 바다 경관 속에서 탁 트인 라운드를 원하는 분",
@@ -217,7 +217,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "무주 숙박 일정과 골프를 나눠 보기부터 확인하세요."
+    "playTip": "숙소 체크아웃 시간과 골프장 도착 시간을 따로 적어보세요."
   },
   "gyeongju-shilla-cc": {
     "recommendedFor": "경주시 권역에서 코스 구성과 예약 조건을 비교하는 동반자",
@@ -305,7 +305,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "팔공산 관광과 골프 예약의 구분부터 확인하세요."
+    "playTip": "팔공산 관광지 주소를 골프장 도착지로 사용하지 않도록 주의하세요."
   },
   "daejeon-cc": {
     "recommendedFor": "대전 도심에서 접근성 좋은 회원제를 원하는 분",
@@ -393,7 +393,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "초대받은 경우에도 확인할 예약 정보부터 확인하세요."
+    "playTip": "초대자에게 지점명과 예약자, 현장 접수 방법을 확인하세요."
   },
   "the-classic-jeju": {
     "recommendedFor": "제주 여행 중 가성비 좋은 대중제를 찾는 분",
@@ -432,7 +432,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "방문 권한과 예약 확정을 먼저부터 확인하세요."
+    "playTip": "초대 여부만으로 출발하지 말고 확정된 방문 시간과 접수 절차를 받으세요."
   },
   "haesley-nine-bridges": {
     "deepDive": [
@@ -450,7 +450,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "정확한 지점명으로 일정 공유부터 확인하세요."
+    "playTip": "제주 지점과 혼동하지 않도록 예약 확인서의 주소를 공유하세요."
   },
   "konjiam-gc": {
     "deepDive": [
@@ -468,7 +468,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "골프와 숙박 상품을 따로 읽기부터 확인하세요."
+    "playTip": "숙박 상품에 골프가 포함되는지 예약 내역에서 직접 확인하세요."
   },
   "hwasan-cc": {
     "recommendedFor": "수도권에서 한적한 회원제 라운드를 원하는 분",
@@ -503,7 +503,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "남해 이동은 왕복으로 계획하기부터 확인하세요."
+    "playTip": "남해까지 가는 시간에 더해 마지막 날 운전과 휴식도 계획하세요."
   },
   "raon-gc-jeju": {
     "recommendedFor": "제주에서 코스 선택 폭이 넓은 대중제를 찾는 분",
@@ -573,7 +573,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "소개 문구보다 예약한 코스 정보부터 확인하세요."
+    "playTip": "코스에 대한 수식어보다 예약한 코스와 이용 조건을 먼저 읽으세요."
   },
   "jade-palace-gc": {
     "deepDive": [
@@ -591,7 +591,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "플레이 계획은 공식 홀 안내부터부터 확인하세요."
+    "playTip": "공식 홀 안내에서 사용할 티와 목표 지점을 살펴보세요."
   },
   "vision-hills-cc": {
     "deepDive": [
@@ -609,7 +609,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "거리보다 플레이 선택을 준비부터 확인하세요."
+    "playTip": "무조건 긴 샷을 계획하기보다 다음 샷을 할 위치를 생각해보세요."
   },
   "ananti-club-seoul": {
     "deepDive": [
@@ -627,7 +627,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "서울이라는 이름과 실제 주소부터 확인하세요."
+    "playTip": "브랜드의 서울 명칭과 실제 골프장 주소를 구분하세요."
   },
   "east-valley-cc": {
     "deepDive": [
@@ -645,7 +645,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "이스트밸리 예약 내역 읽기부터 확인하세요."
+    "playTip": "예약 확인서에 적힌 인원과 코스, 티타임을 함께 대조하세요."
   },
   "lexfield-cc": {
     "recommendedFor": "여주권에서 잘 다듬어진 회원제를 선호하는 분",
@@ -680,7 +680,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "해남 골프 여행의 첫날과 마지막 날부터 확인하세요."
+    "playTip": "해남 도착일과 귀가일의 이동 부담을 나눠 일정에 반영하세요."
   },
   "sagewood-yeosu-gyeongdo": {
     "recommendedFor": "여수 바다 섬에서 휴양 라운드를 즐기려는 분",
@@ -715,7 +715,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "청주권 모임의 집결 방식부터 확인하세요."
+    "playTip": "청주권 참가자와 다른 도시에서 오는 참가자의 집결 방법을 맞추세요."
   },
   "ananti-jungang-jincheon": {
     "recommendedFor": "충북에서 조용한 회원제 라운드를 반기는 분",
@@ -767,7 +767,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "세종 모임의 초대 절차부터 확인하세요."
+    "playTip": "초대에 응하기 전에 참석자의 비용 부담과 정산 조건을 확인하세요."
   },
   "sejong-raycastle": {
     "recommendedFor": "세종권에서 접근성 좋은 대중제를 반기는 분",
@@ -802,7 +802,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "대전 시내 일정과 라운드 구분부터 확인하세요."
+    "playTip": "유성권 숙박·관광 일정과 골프장 도착 시간을 따로 정하세요."
   },
   "guni-cc": {
     "recommendedFor": "대구권에서 부담 없는 대중제를 선호하는 분",
@@ -837,7 +837,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "광주권 당일 라운드의 시간표부터 확인하세요."
+    "playTip": "현장 도착 이후 접수·환복에 쓸 시간을 남겨두세요."
   },
   "baystars-cc": {
     "recommendedFor": "울산권에서 캐주얼하게 즐기는 대중제를 반기는 분",
@@ -872,7 +872,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "단지 전체와 예약 코스는 다릅니다부터 확인하세요."
+    "playTip": "단지의 전체 홀 수와 당일 예약한 코스를 구분해 안내하세요."
   },
   "iksan-cc": {
     "recommendedFor": "전북 익산권에서 가까운 대중제를 눈여겨보는 분",
@@ -941,7 +941,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "브랜드와 예약 코스를 함께부터 확인하세요."
+    "playTip": "가평 지점과 다른 베네스트 지점을 혼동하지 않도록 주소를 공유하세요."
   },
   "lakewood-cc": {
     "deepDive": [
@@ -959,7 +959,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "레이크우드의 코스 선택 확인부터 확인하세요."
+    "playTip": "예약한 코스명과 티타임을 확인서 그대로 동반자에게 전달하세요."
   },
   "namchon-cc": {
     "deepDive": [
@@ -977,7 +977,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "회원권 가격과 방문 경험을 분리부터 확인하세요."
+    "playTip": "회원권 시세를 서비스나 플레이 경험의 근거로 삼지 마세요."
   },
   "yangji-pine-gc": {
     "recommendedFor": "리조트와 묶어 가족 단위로 즐기려는 분",
@@ -1012,7 +1012,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "88CC 예약 안내의 코스명부터 확인하세요."
+    "playTip": "예약 안내의 코스 구분과 접수 장소를 먼저 확인하세요."
   },
   "ferrum-club": {
     "deepDive": [
@@ -1030,7 +1030,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "공식 예약과 평가 문구 구분부터 확인하세요."
+    "playTip": "예약 가능 여부와 조건은 공식 안내에서 확인하고 평가 글과 나눠 읽으세요."
   },
   "anseong-benest-gc": {
     "deepDive": [
@@ -1048,7 +1048,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "같은 브랜드의 다른 지점과 구분부터 확인하세요."
+    "playTip": "안성 지점인지 확인하고 동반자에게 주소까지 전달하세요."
   },
   "sky-valley-cc": {
     "recommendedFor": "여주권에서 경관 좋은 대중제를 즐기는 분",
@@ -1100,7 +1100,7 @@ export const courseNotes: Record<string, CourseNote> = {
       }
     ],
     "recommendedFor": "방문 전에 예약 조건과 동반 일정을 정리하려는 분",
-    "playTip": "대회 이력과 당일 이용은 별도부터 확인하세요."
+    "playTip": "대회 개최 이력을 일반 방문객의 이용 조건과 구분하세요."
   },
   "sonofelice-cc": {
     "recommendedFor": "스키·휴양과 라운드를 함께 즐기려는 분",
