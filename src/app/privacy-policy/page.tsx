@@ -41,6 +41,7 @@ export default function PrivacyPolicyPage() {
         맞춤 광고를 비활성화할 수 있으며, 브라우저 설정을 통해 쿠키 저장을 거부할 수 있습니다.
       </p>
 
+      <p className="mt-4 text-green-900/80">Google 서비스에서 처리하는 정보와 이용 목적은 <a href="https://policies.google.com/technologies/partner-sites?hl=ko" className="text-green-600 underline" target="_blank" rel="noopener noreferrer">Google의 파트너 사이트 데이터 이용 안내</a>에서 확인할 수 있습니다. 광고 서비스는 쿠키 외에도 웹 비콘, IP 주소와 기기 식별자 등을 사용할 수 있습니다.</p>
       <h2 className="mt-10 text-xl font-bold text-green-900">3. 분석 도구</h2>
       <p className="mt-4 text-green-900/80">
         본 사이트는 서비스 개선을 위해 향후 Google Analytics와 같은 방문자 통계 분석 도구를 도입할 수 있습니다.
