@@ -79,6 +79,7 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-6xl px-4 py-8" aria-label="첫 라운드 준비 도우미"><div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8"><p className="text-sm font-bold text-emerald-800">직접 써보는 준비 도구</p><h2 className="mt-2 text-2xl font-bold text-slate-900">첫 라운드 준비 도우미</h2><p className="mt-3 max-w-3xl leading-relaxed text-slate-600">남은 기간·장비·이동 방법을 골라 준비 목록을 줄여 보세요. 동반자에게 물어볼 내용과 내가 챙길 것을 분리하면 전날의 혼란이 줄어듭니다.</p><Link href="/tools/round-planner" className="mt-5 inline-block rounded-full bg-slate-900 px-6 py-3 font-bold text-white">내 준비표 만들기 →</Link></div></section>
       {/* 숫자 띠 */}
       <section className="border-b border-green-100 bg-cream">
         <div className="mx-auto grid max-w-6xl grid-cols-3 divide-x divide-green-100 px-4">
@@ -92,7 +93,7 @@ export default function Home() {
           </div>
           <div className="py-6 text-center">
             <div className="text-2xl font-bold text-green-700 sm:text-3xl">{tools.length}</div>
-            <div className="mt-1 text-xs text-green-900/60 sm:text-sm">골프 계산기</div>
+            <div className="mt-1 text-xs text-green-900/60 sm:text-sm">골프 준비 도구</div>
           </div>
         </div>
       </section>

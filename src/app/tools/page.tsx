@@ -5,13 +5,13 @@ import AdSlot from "@/components/ui/AdSlot";
 import { siteConfig } from "@/config";
 
 export const metadata: Metadata = {
-  title: "골프 계산기 — 라운드 비용·핸디캡·비거리",
+  title: "골프 준비 도구 — 체크리스트·비용·스코어·비거리",
   description:
-    "라운드 1인당 비용, 간이 핸디캡, 야드·미터 비거리 환산까지. 골프 라운드에 필요한 계산을 한곳에서 빠르게 해결하세요.",
+    "첫 라운드 준비 체크리스트, 1인당 비용, 스코어 평균, 야드·미터 환산을 한곳에서 확인하세요.",
   alternates: { canonical: "/tools" },
   openGraph: {
-    title: "골프 계산기 모음",
-    description: "라운드 비용·핸디캡·비거리를 한곳에서 계산",
+    title: "골프 준비 도구 모음",
+    description: "라운드 체크리스트와 비용·스코어·비거리 계산",
     url: `${siteConfig.url}/tools`,
   },
 };
@@ -39,14 +39,14 @@ export default function ToolsIndexPage() {
         <nav className="text-sm text-green-900/50">
           <Link href="/" className="hover:text-green-600">홈</Link>
           <span className="mx-1.5">/</span>
-          <span className="text-green-900/80">골프 계산기</span>
+          <span className="text-green-900/80">골프 준비 도구</span>
         </nav>
 
         <header className="mt-4">
-          <h1 className="text-2xl font-bold text-green-900 sm:text-3xl">골프 계산기</h1>
+          <h1 className="text-2xl font-bold text-green-900 sm:text-3xl">골프 준비 도구</h1>
           <p className="mt-3 max-w-2xl leading-relaxed text-green-900/70">
-            라운드 비용부터 핸디캡, 비거리까지. 라운드를 준비하면서 자주 따져보게 되는 계산을 도구로 모았습니다.
-            숫자만 넣으면 바로 결과가 나옵니다.
+            내 일정에 맞는 준비 목록부터 라운드 비용, 스코어 기록, 비거리까지.
+            필요한 도구를 골라 조건을 정리하고 다음 준비로 이어가세요.
           </p>
         </header>
 
@@ -62,7 +62,7 @@ export default function ToolsIndexPage() {
               </span>
               <h2 className="mt-3 font-bold text-green-900 group-hover:text-green-700">{t.name}</h2>
               <p className="mt-1.5 text-sm leading-relaxed text-green-900/70">{t.description}</p>
-              <span className="mt-3 text-sm font-medium text-green-600">계산하러 가기 →</span>
+              <span className="mt-3 text-sm font-medium text-green-600">도구 사용하기 →</span>
             </Link>
           ))}
         </div>

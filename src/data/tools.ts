@@ -6,6 +6,7 @@ export type GolfTool = {
 };
 
 export const tools: GolfTool[] = [
+  {slug: "round-planner", name: "첫 라운드 준비 도우미", tagline: "예약부터 귀가까지", description: "남은 기간·장비·이동 방법에 맞는 체크리스트를 만들고 준비표로 저장하세요."},
   {
     slug: "round-cost",
     name: "라운드 비용 계산기",
