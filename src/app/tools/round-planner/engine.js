@@ -4,7 +4,7 @@ export function initializePlanner(root) {
   const one = (s) => root.querySelector(s);
   const value = (id) => one(`[data-field="${id}"]`)?.value ?? '';
   const text = (s, v) => { const el = one(s); if (el) el.textContent = v; };
-  const number = (id) => { const el = one(`[data-field="${id}"]`), v = value(id); return v.trim() && el.validity.valid && Number.isFinite(Number(v)) && Number(v) >= 0 ? Number(v) : null; };
+  const number = (id) => { const el = one(`[data-field="${id}"]`), v = value(id); if (!v.trim()) return null; if (!el.validity.valid) return null; if (!Number.isFinite(Number(v))) return null; return Number(v) >= 0 ? Number(v) : null; };
   function render() {
     const invalid = all('input[type="number"]').filter(el => !el.validity.valid);
     all('input[type="number"]').forEach(el => el.setAttribute('aria-invalid', String(!el.validity.valid)));
@@ -20,14 +20,14 @@ export function initializePlanner(root) {
     }
     if (root.dataset.kind === 'job') {
       const hours = number('hours'), commute = number('commute');
-      const total = hours !== null && commute !== null ? hours * 60 + commute * 2 : null;
+      const total = [hours, commute].includes(null) ? null : hours * 60 + commute * 2;
       text('[data-advice]', total === null ? '근무시간과 편도 통근시간을 입력하면 하루에 확보할 시간을 계산합니다.' : `근무 ${hours}시간 + 왕복 통근 ${commute * 2}분 = 하루 ${Math.floor(total / 60)}시간 ${total % 60}분. 식사·별도 휴게·출근 준비 시간은 추가로 확보하세요. 이 값은 임금 계산이나 채용 적합성 판정이 아닙니다.`);
     }
     if (root.dataset.kind === 'pig') {
       const max = number('available');
       for (const key of ['a', 'b']) {
         const walk = number(`${key}-walk`), rest = number(`${key}-rest`), travel = number(`${key}-travel`);
-        const total = walk !== null && rest !== null && travel !== null ? walk + rest + travel : null;
+        const total = [walk, rest, travel].includes(null) ? null : walk + rest + travel;
         text(`[data-total="${key}"]`, total === null ? '왕복 걷기·휴식·왕복 이동 시간을 모두 채우면 합계를 표시합니다.' : `하루 예상 ${Math.floor(total / 60)}시간 ${total % 60}분${max !== null ? total > max * 60 ? ' · 확보한 시간을 초과합니다. 구간이나 일정을 다시 정하세요.' : ` · 남는 시간 ${Math.round(max * 60 - total)}분. 교통 지연과 현장 변수를 별도로 고려하세요.` : ''}`);
       }
     }
