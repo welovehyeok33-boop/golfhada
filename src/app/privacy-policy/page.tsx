@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="prose-kr mx-auto max-w-3xl px-4 py-12">
       <h1 className="text-2xl font-bold text-green-900 sm:text-3xl">개인정보처리방침</h1>
-      <p className="mt-4 text-sm text-green-900/50">시행일: 2026년 6월 22일</p>
+      <p className="mt-4 text-sm text-green-900/50">시행일: 2026년 10월 7일</p>
 
       <p className="mt-6 text-green-900/80">
         {siteConfig.name}(이하 &ldquo;사이트&rdquo;)는 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 등
@@ -38,14 +38,13 @@ export default function PrivacyPolicyPage() {
       </p>
       <p className="mt-4 text-green-900/80">
         이용자는 <a href="https://www.google.com/settings/ads" className="text-green-600 underline" target="_blank" rel="noopener noreferrer">Google 광고 설정</a>에서
-        맞춤 광고를 비활성화할 수 있으며, 브라우저 설정을 통해 쿠키 저장을 거부할 수 있습니다.
+        맞춤 광고를 비활성화할 수 있으며, 브라우저 설정을 통해 쿠키 저장을 거부할 수 있습니다. 다른 참여 광고업체의 맞춤 광고 설정은 <a href="https://www.aboutads.info/choices/" className="underline">aboutads.info</a>에서 확인할 수 있습니다.
       </p>
 
       <p className="mt-4 text-green-900/80">Google 서비스에서 처리하는 정보와 이용 목적은 <a href="https://policies.google.com/technologies/partner-sites?hl=ko" className="text-green-600 underline" target="_blank" rel="noopener noreferrer">Google의 파트너 사이트 데이터 이용 안내</a>에서 확인할 수 있습니다. 광고 서비스는 쿠키 외에도 웹 비콘, IP 주소와 기기 식별자 등을 사용할 수 있습니다.</p>
-      <h2 className="mt-10 text-xl font-bold text-green-900">3. 분석 도구</h2>
+      <h2 className="mt-10 text-xl font-bold text-green-900">3. 계산·준비 도구</h2>
       <p className="mt-4 text-green-900/80">
-        본 사이트는 서비스 개선을 위해 향후 Google Analytics와 같은 방문자 통계 분석 도구를 도입할 수 있습니다.
-        분석 서비스가 적용되는 경우 해당 제공업체의 개인정보 정책과 설정에 따라 접속 정보가 처리될 수 있습니다. 계산 도구 입력값은 브라우저에서 처리되며 계산 기능은 이를 서버에 제출하거나 저장하지 않습니다.
+        계산 금액, 일정, 체크 상태와 메모는 현재 브라우저 화면에서 처리합니다. 도구는 입력을 서버로 제출하거나 URL·쿠키·로컬 저장소에 자동 저장하지 않습니다. 복사를 누르면 기기의 클립보드로, 저장을 누르면 텍스트 파일로 전달됩니다. 인쇄·PDF는 브라우저의 인쇄 기능을 이용합니다. 저장한 파일과 공유한 내용은 이용자가 관리합니다. 광고·호스팅의 접속정보 처리와는 별개입니다.
       </p>
 
       <h2 className="mt-10 text-xl font-bold text-green-900">4. 개인정보의 제3자 제공</h2>

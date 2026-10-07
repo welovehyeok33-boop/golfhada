@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -53,19 +52,14 @@ export default function RootLayout({
 
   return (
     <html lang="ko" className={`${notoSansKr.variable} h-full antialiased`}>
+      <head>
+        {siteConfig.adsenseClient ? <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsenseClient}`} crossOrigin="anonymous" /> : null}
+      </head>
       <body className="min-h-full flex flex-col bg-background text-[#14241a]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-        {siteConfig.adsenseClient ? (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsenseClient}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        ) : null}
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

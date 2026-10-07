@@ -7,11 +7,11 @@ import { siteConfig } from "@/config";
 export const metadata: Metadata = {
   title: "라운드 비용 계산기 — 골프 1인당 비용 계산",
   description:
-    "그린피, 카트비, 캐디피, 식사비를 인원수로 나눠 골프 라운드 1인당 비용을 계산합니다. 부킹 전 예산을 미리 잡아보세요.",
+    "개인 그린피·식사비와 팀 카트비·캐디피·공동 교통비를 구분해 인원별 라운드 비용과 공유용 정산표를 만듭니다.",
   alternates: { canonical: "/tools/round-cost" },
   openGraph: {
     title: "라운드 비용 계산기",
-    description: "그린피·카트·캐디·식사를 인원으로 나눈 1인당 라운드 비용",
+    description: "개인 비용과 팀 공통 비용을 구분하는 라운드 정산표",
     url: `${siteConfig.url}/tools/round-cost`,
   },
 };
