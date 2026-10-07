@@ -9,6 +9,8 @@ export function initializePlanner(root) {
   function preset(key) {
     const data = one(`[data-preset="${key}:${value(key+'-route')}"]`);
     for (const part of ['walk','name']) { const el = one(`[data-field="${key}-${part}"]`); if (el) el.value = data ? data.dataset[part === 'walk' ? 'minutes' : 'name'] : ''; }
+    for(const part of ['out','back','note','source']){const el=one(`[data-field="${key}-${part}"]`);if(el)el.value='';}
+    text('[data-status]','코스를 바꿨습니다. 새 출발·도착점의 이동 시간을 다시 입력하세요.');
   }
   function render() {
     one('[data-copy-preview]')?.remove();
@@ -28,12 +30,12 @@ export function initializePlanner(root) {
       const totals = {};
       for (const k of ['a','b']) {
         const hours=number(k+'-hours'), rest=number(k+'-break'), commute=number(k+'-commute'), days=number(k+'-days'), fare=number(k+'-fare');
-        const impossible=[hours,rest].includes(null) ? false : hours*60+rest>1440;
+        const impossible=[hours,rest,commute].includes(null) ? false : hours*60+rest+commute*2>1440;
         const daily=impossible ? null : [hours,rest,commute].includes(null) ? null : hours*60+rest+commute*2;
         const monthly=[daily,days].includes(null) ? null : daily*days;
         const cost=[fare,days].includes(null) ? null : fare*days;
         totals[k]={daily,cost};
-        text(`[data-total="${k}"]`, `${impossible ? '근무와 별도 휴게의 합이 24시간을 넘습니다. 중복 입력을 확인하세요.' : daily===null ? '하루 확보 시간: 미확인' : '하루 확보 시간: '+duration(daily)} / 월 확보 시간: ${monthly===null ? '미확인' : duration(monthly)} / 월 교통비: ${cost===null ? '미확인' : cost.toLocaleString('ko-KR')+'원'}`);
+        text(`[data-total="${k}"]`, `${impossible ? '근무·별도 휴게·왕복 통근의 합이 24시간을 넘습니다. 중복 입력이나 여러 날에 걸친 일정을 확인하세요.' : daily===null ? '하루 확보 시간: 미확인' : '하루 확보 시간: '+duration(daily)} / 월 확보 시간: ${monthly===null ? '미확인' : duration(monthly)} / 월 교통비: ${cost===null ? '미확인' : cost.toLocaleString('ko-KR')+'원'}`);
         const questions=all(`[data-known="${k}"]`).filter(el=>!el.checked).map(el=>el.dataset.question);
         for(const [part,q] of [['hours','하루 실제 근무시간은 몇 시간인가요?'],['break','별도 휴게시간은 몇 분인가요?'],['commute','실제 출퇴근 시각의 편도 이동은 몇 분 걸리나요?'],['days','비교할 달의 출근일은 며칠인가요?'],['fare','하루 왕복 교통비 중 본인 부담은 얼마인가요?']])if(number(k+'-'+part)===null)questions.push(q);
         const container=one(`[data-questions="${k}"]`); container.replaceChildren();
@@ -82,9 +84,9 @@ export function initializePlanner(root) {
       const invalid = all('input[type="number"]').find(el => !el.validity.valid);
       if (invalid) { invalid.focus(); text('[data-status]', '잘못된 숫자를 수정한 뒤 저장해 주세요.'); return; }
       const url = URL.createObjectURL(new Blob([summary()], { type: 'text/plain;charset=utf-8' }));
-      const link = document.createElement('a'); link.href = url; link.download = `${root.dataset.kind}-preparation.txt`; link.click();
+      const link = document.createElement('a'); link.href = url; link.download = `${root.dataset.kind}-preparation.txt`;document.body.append(link);link.click();link.remove();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
-      text('[data-status]', '준비표를 텍스트 파일로 저장했습니다. 다운로드 목록을 확인하세요.');
+      text('[data-status]', '준비표 다운로드를 요청했습니다. 브라우저 다운로드 목록을 확인하세요. 파일이 보이지 않으면 공유할 내용 복사를 이용하세요.');
     }
     if (action === 'print') window.print();
     if (action === 'sample') {
