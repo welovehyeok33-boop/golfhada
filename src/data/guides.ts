@@ -23,7 +23,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -148,7 +148,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -275,7 +275,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -404,7 +404,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -532,7 +532,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -997,7 +997,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -1112,7 +1112,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -3247,7 +3247,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -3680,7 +3680,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -3917,7 +3917,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -4025,7 +4025,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
@@ -4272,7 +4272,7 @@ export const guides: GuideArticle[] = [
       },
       {
         "type": "table",
-        "caption": "비교·기록 방법을 위한 편집 예시입니다. 실제 예약 상품·공고·개인 체험이 아닙니다.",
+        "caption": "내 조건을 정리하는 작성 예시 · 실제 상품이나 방문 후기가 아닙니다.",
         "headers": [
           "구분",
           "적을 내용",
