@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="prose-kr mx-auto max-w-3xl px-4 py-12">
       <h1 className="text-2xl font-bold text-green-900 sm:text-3xl">개인정보처리방침</h1>
-      <p className="mt-4 text-sm text-green-900/50">시행일: 2026년 10월 7일</p>
+      <p className="mt-4 text-sm text-green-900/50">최종 보완: 2026년 10월 25일</p>
 
       <p className="mt-6 text-green-900/80">
         {siteConfig.name}(이하 &ldquo;사이트&rdquo;)는 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 등
@@ -43,6 +43,7 @@ export default function PrivacyPolicyPage() {
 
       <p className="mt-4 text-green-900/80">Google 서비스에서 처리하는 정보와 이용 목적은 <a href="https://policies.google.com/technologies/partner-sites?hl=ko" className="text-green-600 underline" target="_blank" rel="noopener noreferrer">Google의 파트너 사이트 데이터 이용 안내</a>에서 확인할 수 있습니다. 광고 서비스는 쿠키 외에도 웹 비콘, IP 주소와 기기 식별자 등을 사용할 수 있습니다.</p>
       <h2 className="mt-10 text-xl font-bold text-green-900">3. 계산·준비 도구</h2>
+      <p className="mt-4 text-green-900/80">가이드 본문의 작성용 메모도 현재 브라우저에서만 편집합니다. 이름·연락처·결제정보는 요구하지 않으며, 복사 또는 파일 저장을 사용자가 선택할 때 기기에 내용이 남습니다.</p>
       <p className="mt-4 text-green-900/80">
         계산 금액, 일정, 체크 상태와 메모는 현재 브라우저 화면에서 처리합니다. 도구는 입력을 서버로 제출하거나 URL·쿠키·로컬 저장소에 자동 저장하지 않습니다. 복사를 누르면 기기의 클립보드로, 저장을 누르면 텍스트 파일로 전달됩니다. 인쇄·PDF는 브라우저의 인쇄 기능을 이용합니다. 저장한 파일과 공유한 내용은 이용자가 관리합니다. 광고·호스팅의 접속정보 처리와는 별개입니다.
       </p>

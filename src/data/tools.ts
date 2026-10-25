@@ -11,7 +11,7 @@ export const tools: GolfTool[] = [
     slug: "round-cost",
     name: "라운드 비용 계산기",
     tagline: "1인당 얼마 들까?",
-    description: "그린피·카트비·캐디피·식사비를 인원수로 나눠 1인당 라운드 비용을 한 번에 계산합니다.",
+    description: "개인 그린피·식사비와 팀 카트비·캐디피·공동 교통비를 구분해 인원별 정산표를 만듭니다.",
   },
   {
     slug: "handicap",

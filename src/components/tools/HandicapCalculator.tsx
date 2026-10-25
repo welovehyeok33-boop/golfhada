@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function HandicapCalculator() {
   const [par, setPar] = useState(72);
   const [scores, setScores] = useState<string[]>(["", "", ""]);
+  const invalid = scores.some(s => s.trim() !== "" && (!Number.isInteger(Number(s)) || Number(s) < 1 || Number(s) > 300));
 
   const nums = scores.map((s) => Number(s)).filter((n) => Number.isFinite(n) && Number.isInteger(n) && n > 0 && n <= 300);
   const count = nums.length;
@@ -58,7 +59,8 @@ export default function HandicapCalculator() {
               placeholder="예: 92"
               value={s}
               onChange={(e) => setScore(i, e.target.value)}
-              className="flex-1 rounded-lg border border-green-200 bg-green-50/40 px-3 py-2 text-right font-semibold text-green-900 focus:border-green-400 focus:outline-none focus:ring-1 focus:ring-green-400"
+              aria-invalid={s.trim() !== "" && (!Number.isInteger(Number(s)) || Number(s) < 1 || Number(s) > 300)}
+              className="min-w-0 flex-1 rounded-lg border border-green-200 bg-green-50/40 px-3 py-2 text-right font-semibold text-green-900 focus:border-green-400 focus:outline-none focus:ring-1 focus:ring-green-400"
             />
             {scores.length > 1 && (
               <button
@@ -83,7 +85,7 @@ export default function HandicapCalculator() {
 
       {/* 결과 */}
       <div className="mt-6 rounded-xl bg-green-700 p-5 text-white">
-        {count === 0 ? (
+        {invalid ? <p role="alert">1~300 사이의 정수로 입력하세요. 잘못된 기록을 수정한 뒤 평균을 표시합니다.</p> : count === 0 ? (
           <p className="text-sm text-green-100/80">스코어를 한 개 이상 입력하면 결과가 나타납니다.</p>
         ) : (
           <>

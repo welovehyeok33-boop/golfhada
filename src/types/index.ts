@@ -8,6 +8,8 @@ export interface Region {
 }
 
 export type GuideBlock =
+  | { type: "table"; caption: string; headers: string[]; rows: string[][] }
+  | { type: "worksheet"; title: string; fields: string[] }
   | { type: "checklist"; items: string[] }
   | { type: "source"; label: string; url: string }
   | { type: "p"; text: string }

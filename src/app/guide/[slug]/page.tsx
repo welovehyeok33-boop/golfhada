@@ -7,6 +7,7 @@ import type { GuideBlock } from "@/types";
 import GuideCard from "@/components/ui/GuideCard";
 import AuthorBox from "@/components/ui/AuthorBox";
 import PreparationChecklist from "@/components/ui/PreparationChecklist";
+import GuideWorksheet from "@/components/ui/GuideWorksheet";
 import { siteConfig } from "@/config";
 
 export function generateStaticParams() {
@@ -37,6 +38,10 @@ export async function generateMetadata({
 
 function Block({ block, index }: { block: GuideBlock; index: number }) {
   switch (block.type) {
+    case "table":
+      return <div className="my-6 overflow-x-auto rounded-xl border border-green-200"><table className="w-full min-w-[280px] table-fixed text-left text-sm"><caption className="p-3 text-left text-xs text-green-900/70">{block.caption}</caption><thead><tr>{block.headers.map(h=><th key={h} scope="col" className="border-b border-green-200 bg-green-50 p-3">{h}</th>)}</tr></thead><tbody>{block.rows.map((row,i)=><tr key={i}>{row.map((cell,j)=><td key={j} className="border-b border-green-100 p-3 align-top break-words">{cell}</td>)}</tr>)}</tbody></table></div>;
+    case "worksheet":
+      return <GuideWorksheet title={block.title} fields={block.fields}/>;
     case "source":
       return <p className="mt-4 text-sm"><a href={block.url} className="text-green-700 underline" target="_blank" rel="noopener noreferrer">{block.label} ↗</a></p>;
     case "h2":
@@ -151,6 +156,7 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
             <span className="font-medium text-green-700">글 · {siteConfig.author.name}</span>
             <span>·</span>
             <time dateTime={guide.publishedAt}>{guide.publishedAt}</time>
+            {guide.updatedAt && guide.updatedAt !== guide.publishedAt && <><span>·</span><time dateTime={guide.updatedAt}>내용 보완 {guide.updatedAt}</time></>}
             <span>·</span>
             <span>약 {guide.readingMinutes}분</span>
           </div>
@@ -184,6 +190,7 @@ export default async function GuidePage({ params }: PageProps<"/guide/[slug]">) 
           ))}
         </div>
 
+        <section className="mt-8 rounded-xl border border-green-200 p-5"><h2 className="font-bold">읽은 내용을 내 라운드에 적용하기</h2><div className="mt-3 flex flex-wrap gap-4 text-sm"><Link className="font-semibold underline underline-offset-4" href="/tools/round-cost">개인·팀 비용 정산표 →</Link><Link className="font-semibold underline underline-offset-4" href="/tools/round-planner">집결·장비 준비표 →</Link></div></section>
         {/* 디렉토리 연결 CTA (내부 링크) */}
         <section className="mt-10 rounded-xl border border-green-100 bg-green-50 p-6">
           <h2 className="text-lg font-bold text-green-900">이제 라운드 갈 골프장을 찾아볼까요?</h2>
